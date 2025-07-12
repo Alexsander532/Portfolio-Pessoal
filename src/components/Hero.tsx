@@ -39,6 +39,17 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
+          {/* Profile Photo */}
+          <div className="mb-8">
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-glow animate-float">
+              <img 
+                src={profilePhoto} 
+                alt="Developer profile" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          
           {/* Main Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             <span className="gradient-text">Fullstack Developer</span>
@@ -50,17 +61,6 @@ const Hero = () => {
             <span className="text-primary font-medium"> aprendizado contínuo</span> 
             na criação de soluções inovadoras e robustas.
           </p>
-
-          {/* Profile Photo */}
-          <div className="mb-12">
-            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-glow animate-float">
-              <img 
-                src={profilePhoto} 
-                alt="Developer profile" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
