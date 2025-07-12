@@ -3,9 +3,11 @@ import { ArrowDown, Github, Linkedin, Download, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,7 +42,7 @@ const Hero = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           {/* Profile Photo */}
-          <div className="mb-8">
+          <div className="mt-20 mb-8">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-glow animate-float">
               <img 
                 src={profilePhoto} 
@@ -52,14 +54,12 @@ const Hero = () => {
           
           {/* Main Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Fullstack Developer</span>
+            <span className="gradient-text">{t('fullstackDeveloper')}</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Sempre em busca de novos conhecimentos e desafios, aplicando 
-            <span className="text-primary font-medium"> aprendizado contínuo</span> 
-            na criação de soluções inovadoras e robustas.
+            {t('heroSubtitle')}
           </p>
 
           {/* CTA Buttons */}
@@ -69,7 +69,7 @@ const Hero = () => {
               className="bg-gradient-primary hover-glow px-8 py-4 text-lg group"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              View My Work
+              {t('viewMyWork')}
               <ArrowDown className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" />
             </Button>
             
@@ -79,7 +79,7 @@ const Hero = () => {
               className="px-8 py-4 text-lg border-primary/30 hover:border-primary/60 hover:bg-primary/10"
             >
               <Download className="w-5 h-5 mr-2" />
-              Download CV
+              {t('downloadCV')}
             </Button>
           </div>
 
@@ -122,7 +122,7 @@ const Hero = () => {
           onClick={scrollToAbout}
           className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-sm mb-2">Scroll to explore</span>
+          <span className="text-sm mb-2">{t('scrollToExplore')}</span>
           <ArrowDown className="w-6 h-6 animate-bounce group-hover:translate-y-1 transition-transform" />
         </button>
       </div>
