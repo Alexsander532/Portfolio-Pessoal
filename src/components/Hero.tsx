@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowDown, Github, Linkedin, Mail, Download } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Download, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.jpg';
@@ -39,8 +39,20 @@ const Hero = () => {
         <div className={`transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
+          {/* Main Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+            <span className="gradient-text">Fullstack Developer</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+            Sempre em busca de novos conhecimentos e desafios, aplicando 
+            <span className="text-primary font-medium"> aprendizado contínuo</span> 
+            na criação de soluções inovadoras e robustas.
+          </p>
+
           {/* Profile Photo */}
-          <div className="mb-8">
+          <div className="mb-12">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/20 shadow-glow animate-float">
               <img 
                 src={profilePhoto} 
@@ -48,36 +60,6 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
-
-          {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Creative &</span>
-            <br />
-            <span className="text-foreground">Solution-Oriented</span>
-            <br />
-            <span className="gradient-text">Fullstack Developer</span>
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            Passionate about building robust solutions from frontend to backend,
-            <span className="text-primary font-medium"> seeking innovative challenges</span> 
-            with TypeScript and modern web technologies.
-          </p>
-
-          {/* Tech Stack Badges */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {['TypeScript', 'React', 'Node.js', 'Tailwind CSS', 'Python', 'AWS'].map((tech, index) => (
-              <span 
-                key={tech}
-                className={`px-4 py-2 rounded-full glass-card text-sm font-medium border border-primary/20 
-                  hover:border-primary/40 transition-all duration-300 animate-fade-in-scale`}
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {tech}
-              </span>
-            ))}
           </div>
 
           {/* CTA Buttons */}
@@ -122,11 +104,13 @@ const Hero = () => {
               <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="mailto:developer@example.com"
+              href="https://x.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-3 rounded-full glass-card hover:bg-primary/10 hover:border-primary/40 
                 transition-all duration-300 hover-glow group"
             >
-              <Mail className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+              <Twitter className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
           </div>
         </div>

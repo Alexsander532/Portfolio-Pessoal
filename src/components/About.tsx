@@ -15,28 +15,38 @@ import { Card, CardContent } from '@/components/ui/card';
 interface Skill {
   name: string;
   level: number;
-  category: 'language' | 'framework' | 'tool' | 'database';
+  category: 'frontend' | 'backend' | 'database' | 'devops';
 }
 
 const skills: Skill[] = [
-  { name: 'TypeScript', level: 95, category: 'language' },
-  { name: 'JavaScript', level: 98, category: 'language' },
-  { name: 'Python', level: 90, category: 'language' },
-  { name: 'Go', level: 85, category: 'language' },
-  { name: 'Java', level: 80, category: 'language' },
-  { name: 'React', level: 95, category: 'framework' },
-  { name: 'Next.js', level: 90, category: 'framework' },
-  { name: 'Node.js', level: 92, category: 'framework' },
-  { name: 'Express', level: 88, category: 'framework' },
-  { name: 'Django', level: 85, category: 'framework' },
-  { name: 'Tailwind CSS', level: 96, category: 'framework' },
+  // Frontend
+  { name: 'React', level: 95, category: 'frontend' },
+  { name: 'Next.js', level: 90, category: 'frontend' },
+  { name: 'TypeScript', level: 93, category: 'frontend' },
+  { name: 'JavaScript', level: 96, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 94, category: 'frontend' },
+  { name: 'HTML/CSS', level: 98, category: 'frontend' },
+  
+  // Backend
+  { name: 'Node.js', level: 92, category: 'backend' },
+  { name: 'Express', level: 88, category: 'backend' },
+  { name: 'Python', level: 85, category: 'backend' },
+  { name: 'Django', level: 80, category: 'backend' },
+  { name: 'FastAPI', level: 78, category: 'backend' },
+  { name: 'Java', level: 75, category: 'backend' },
+  
+  // Database
   { name: 'PostgreSQL', level: 88, category: 'database' },
   { name: 'MongoDB', level: 85, category: 'database' },
-  { name: 'Redis', level: 82, category: 'database' },
-  { name: 'Docker', level: 87, category: 'tool' },
-  { name: 'AWS', level: 85, category: 'tool' },
-  { name: 'Git', level: 95, category: 'tool' },
-  { name: 'Kubernetes', level: 80, category: 'tool' }
+  { name: 'MySQL', level: 82, category: 'database' },
+  { name: 'Redis', level: 80, category: 'database' },
+  
+  // DevOps
+  { name: 'Docker', level: 87, category: 'devops' },
+  { name: 'AWS', level: 85, category: 'devops' },
+  { name: 'Git', level: 95, category: 'devops' },
+  { name: 'CI/CD', level: 82, category: 'devops' },
+  { name: 'Linux', level: 85, category: 'devops' }
 ];
 
 const softSkills = [
@@ -104,10 +114,15 @@ const About = () => {
                   <Code2 className="w-8 h-8 text-primary mr-3" />
                   <h3 className="text-2xl font-bold">Who I Am</h3>
                 </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Sou Alexsander Lima, um desenvolvedor fullstack apaixonado por tecnologia e inovação. 
+                  Minha jornada começou com curiosidade sobre como as coisas funcionam por trás das telas, 
+                  e hoje transformo ideias em soluções digitais completas.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I'm Alex Johnson, a passionate fullstack developer with 5+ years of experience 
-                  building scalable web applications. My love for technology drives me to constantly 
-                  explore new frameworks and methodologies to deliver cutting-edge solutions.
+                  Acredito que a tecnologia deve ser uma ponte entre problemas complexos e soluções elegantes. 
+                  Cada projeto é uma oportunidade de aprender algo novo e aplicar as melhores práticas 
+                  para criar experiências excepcionais.
                 </p>
               </CardContent>
             </Card>
@@ -118,10 +133,15 @@ const About = () => {
                   <Rocket className="w-8 h-8 text-primary mr-3" />
                   <h3 className="text-2xl font-bold">My Journey</h3>
                 </div>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Minha jornada na programação começou com a fascinação de ver código se transformar 
+                  em interfaces funcionais. Desde os primeiros "Hello World" até sistemas complexos, 
+                  cada linha de código representa um passo na evolução constante do conhecimento.
+                </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Started with a computer science degree, then dove deep into modern web development. 
-                  From building my first React app to architecting enterprise-level systems, 
-                  every project has been a learning opportunity that shaped my expertise.
+                  Sempre em busca do próximo desafio, dedico tempo diário para estudar novas tecnologias, 
+                  contribuir para projetos open source e aplicar o aprendizado em projetos práticos. 
+                  A tecnologia evolui rapidamente, e eu evoluo junto com ela.
                 </p>
               </CardContent>
             </Card>
@@ -133,9 +153,9 @@ const About = () => {
                   <h3 className="text-2xl font-bold">Development Philosophy</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  I believe in clean, maintainable code with strong TypeScript typing, 
-                  component-driven architecture using Tailwind CSS, and agile methodologies. 
-                  User experience and code quality are never compromised.
+                  Acredito em código limpo, bem documentado e testável. Priorizo arquiteturas 
+                  escaláveis, componentização inteligente e metodologias ágeis. A experiência 
+                  do usuário e a qualidade do código são pilares fundamentais em cada projeto.
                 </p>
               </CardContent>
             </Card>
@@ -155,10 +175,10 @@ const About = () => {
                 {/* Skill Categories */}
                 <div className="space-y-6">
                   {[
-                    { category: 'language', title: 'Languages', color: 'from-primary to-primary-glow' },
-                    { category: 'framework', title: 'Frameworks', color: 'from-secondary to-accent' },
-                    { category: 'tool', title: 'Tools & Cloud', color: 'from-accent to-success' },
-                    { category: 'database', title: 'Databases', color: 'from-warning to-destructive' }
+                    { category: 'frontend', title: 'Frontend', color: 'from-primary to-primary-glow' },
+                    { category: 'backend', title: 'Backend', color: 'from-secondary to-accent' },
+                    { category: 'database', title: 'Banco de Dados', color: 'from-accent to-success' },
+                    { category: 'devops', title: 'DevOps', color: 'from-warning to-destructive' }
                   ].map(({ category, title, color }) => (
                     <div key={category}>
                       <h4 className="text-lg font-semibold mb-3 text-primary">{title}</h4>
