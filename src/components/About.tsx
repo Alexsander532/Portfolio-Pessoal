@@ -115,14 +115,10 @@ const About = () => {
                   <h3 className="text-2xl font-bold">Who I Am</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Sou Alexsander Lima, um desenvolvedor fullstack apaixonado por tecnologia e inovação. 
-                  Minha jornada começou com curiosidade sobre como as coisas funcionam por trás das telas, 
-                  e hoje transformo ideias em soluções digitais completas.
+                Olá! Sou Alexsander Lima, um desenvolvedor fullstack que respira tecnologia e inovação. Minha paixão genuína por desvendar como as coisas funcionam 'nos bastidores' impulsionou minha jornada, e hoje, com um olhar aguçado para a eficiência e a usabilidade, transformo ideias e desafios em soluções digitais robustas e completas.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Acredito que a tecnologia deve ser uma ponte entre problemas complexos e soluções elegantes. 
-                  Cada projeto é uma oportunidade de aprender algo novo e aplicar as melhores práticas 
-                  para criar experiências excepcionais.
+                Vejo a tecnologia como ponte entre problemas complexos e soluções elegantes. Além de minhas skills técnicas, trago para a equipe um espírito colaborativo, proativo, adaptável e comunicativo. Sou um aprendiz contínuo, aplicando ativamente novos conhecimentos para criar experiências digitais de alto impacto e excelência.
                 </p>
               </CardContent>
             </Card>
@@ -134,14 +130,16 @@ const About = () => {
                   <h3 className="text-2xl font-bold">My Journey</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Minha jornada na programação começou com a fascinação de ver código se transformar 
-                  em interfaces funcionais. Desde os primeiros "Hello World" até sistemas complexos, 
-                  cada linha de código representa um passo na evolução constante do conhecimento.
+                Minha jornada na programação iniciou-se como Técnico em Programação com 
+                especialização em Jogos Digitais pelo SENAI. Lá, adquiri uma base sólida em
+                programação C#, lógica de programação, métodos ágeis e boas práticas de desenvolvimento. Também tive experiência prática com ferramentas como Unity, Blender, Visual Studio e Maya. Atualmente, aprofundo meus conhecimentos no Bacharelado em Engenharia de Computação pelo CEFET/MG, expandindo minha capacidade de transformar ideias em soluções tecnológicas.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Sempre em busca do próximo desafio, dedico tempo diário para estudar novas tecnologias, 
-                  contribuir para projetos open source e aplicar o aprendizado em projetos práticos. 
-                  A tecnologia evolui rapidamente, e eu evoluo junto com ela.
+                Sempre em busca do próximo desafio, dedico tempo diário para estudar novas 
+                tecnologias, contribuir para projetos open source e aplicar o aprendizado em 
+                projetos práticos. Além disso, trabalho há mais de 2 anos como freelancer em 
+                desenvolvimento web e mobile, sempre procurando novos desafios para colocar meus 
+                conhecimentos em prática. A tecnologia evolui rapidamente, e eu evoluo junto com ela.
                 </p>
               </CardContent>
             </Card>
@@ -153,9 +151,10 @@ const About = () => {
                   <h3 className="text-2xl font-bold">Development Philosophy</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
-                  Acredito em código limpo, bem documentado e testável. Priorizo arquiteturas 
-                  escaláveis, componentização inteligente e metodologias ágeis. A experiência 
-                  do usuário e a qualidade do código são pilares fundamentais em cada projeto.
+                Acredito em código limpo, bem documentado e testável. Priorizo arquiteturas 
+                escaláveis, componentização inteligente e metodologias ágeis, valorizando sempre o 
+                trabalho em equipe para alcançar os melhores resultados. A experiência do usuário 
+                e a qualidade do código são pilares fundamentais em cada projeto.
                 </p>
               </CardContent>
             </Card>
