@@ -3,6 +3,7 @@ import { ArrowDown, Github, Linkedin, Download, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.png';
+import curriculumPDF from '@/assets/CV - Alexsander Augusto.pdf';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
@@ -18,6 +19,16 @@ const Hero = () => {
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleDownloadCV = () => {
+    // Criar um link temporário para o download
+    const link = document.createElement('a');
+    link.href = curriculumPDF;
+    link.download = 'CV - Alexsander Augusto.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -77,6 +88,7 @@ const Hero = () => {
               size="lg" 
               variant="outline" 
               className="px-8 py-4 text-lg border-primary/30 hover:border-primary/60 hover:bg-primary/10"
+              onClick={handleDownloadCV}
             >
               <Download className="w-5 h-5 mr-2" />
               {t('downloadCV')}
