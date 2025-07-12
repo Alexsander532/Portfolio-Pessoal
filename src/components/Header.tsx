@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
 import { LanguageSwitcher } from '@/components/ui/language-switcher';
 import { useLanguage } from '@/contexts/LanguageContext';
 
@@ -71,15 +70,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* Social Links, Language Switcher & CTA */}
+          {/* Social Links & Language Switcher */}
           <div className="hidden md:flex items-center justify-end space-x-4">
-            {/* Language Switcher */}
-            <LanguageSwitcher 
-              currentLanguage={language}
-              onChange={setLanguage}
-              className="mr-3"
-            />
-            
             <a
               href="https://github.com"
               target="_blank"
@@ -102,17 +94,21 @@ const Header = () => {
             >
               <Mail className="w-5 h-5" />
             </a>
-            <Button
-              onClick={() => scrollToSection('contact')}
-              className="ml-4 bg-gradient-primary hover-glow"
-            >
-              {t('hireMe')}
-              <ExternalLink className="w-4 h-4 ml-2" />
-            </Button>
+            
+            {/* Language Switcher */}
+            <LanguageSwitcher 
+              currentLanguage={language}
+              onChange={setLanguage}
+            />
           </div>
 
           {/* Mobile Layout */}
           <div className="col-span-2 flex md:hidden items-center justify-end">
+            <LanguageSwitcher 
+              currentLanguage={language}
+              onChange={setLanguage}
+              className="mr-4"
+            />
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-foreground hover:text-primary transition-colors"
@@ -157,14 +153,7 @@ const Header = () => {
                 {t('contact')}
               </button>
               
-              {/* Language Selector for Mobile */}
               <div className="flex items-center justify-between pt-4 border-t border-border">
-                <LanguageSwitcher 
-                  currentLanguage={language}
-                  onChange={setLanguage}
-                  className="mr-2"
-                />
-                
                 <div className="flex items-center space-x-4">
                   <a
                     href="https://github.com"
@@ -190,14 +179,6 @@ const Header = () => {
                   </a>
                 </div>
               </div>
-              
-              <Button
-                onClick={() => scrollToSection('contact')}
-                className="w-full bg-gradient-primary hover-glow mt-4"
-              >
-                {t('hireMe')}
-                <ExternalLink className="w-4 h-4 ml-2" />
-              </Button>
             </div>
           </div>
         )}
