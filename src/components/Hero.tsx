@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { ArrowDown, Github, Linkedin, Download, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/profile-photo.png';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
