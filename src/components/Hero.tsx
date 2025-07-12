@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { ArrowDown, Github, Linkedin, Download, Twitter } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.png';
 import curriculumPDF from '@/assets/CV - Alexsander Augusto.pdf';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { XIcon } from '@/components/ui/x-logo';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -13,13 +14,6 @@ const Hero = () => {
   useEffect(() => {
     setIsVisible(true);
   }, []);
-
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   const handleDownloadCV = () => {
     // Criar um link temporário para o download
@@ -98,7 +92,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex justify-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/Alexsander532"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-card hover:bg-primary/10 hover:border-primary/40 
@@ -107,7 +101,7 @@ const Hero = () => {
               <Github className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/alexsander-augusto-lima-9b49221b4"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-card hover:bg-primary/10 hover:border-primary/40 
@@ -116,27 +110,16 @@ const Hero = () => {
               <Linkedin className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://x.com"
+              href="https://x.com/AlexDev2025"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-card hover:bg-primary/10 hover:border-primary/40 
                 transition-all duration-300 hover-glow group"
             >
-              <Twitter className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
+              <XIcon className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <button 
-          onClick={scrollToAbout}
-          className="flex flex-col items-center text-muted-foreground hover:text-primary transition-colors group"
-        >
-          <span className="text-sm mb-2">{t('scrollToExplore')}</span>
-          <ArrowDown className="w-6 h-6 animate-bounce group-hover:translate-y-1 transition-transform" />
-        </button>
       </div>
     </section>
   );
