@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Code2, Rocket, Heart } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface AboutTabsProps {
   className?: string;
@@ -17,6 +18,7 @@ export function AboutTabs({
   myJourney 
 }: AboutTabsProps) {
   const [activeTab, setActiveTab] = useState("whoIAm");
+  const { language } = useLanguage();
 
   return (
     <Tabs
@@ -27,15 +29,15 @@ export function AboutTabs({
       <TabsList className="grid grid-cols-3 mb-8">
         <TabsTrigger value="whoIAm" className="flex items-center gap-2">
           <Code2 className="w-4 h-4" />
-          <span className="hidden md:inline">Who I Am</span>
+          <span className="hidden md:inline">{language === 'pt' ? 'Quem Sou' : 'Who I Am'}</span>
         </TabsTrigger>
         <TabsTrigger value="myJourney" className="flex items-center gap-2">
           <Rocket className="w-4 h-4" />
-          <span className="hidden md:inline">My Journey</span>
+          <span className="hidden md:inline">{language === 'pt' ? 'Minha Jornada' : 'My Journey'}</span>
         </TabsTrigger>
         <TabsTrigger value="developmentPhilosophy" className="flex items-center gap-2">
           <Heart className="w-4 h-4" />
-          <span className="hidden md:inline">Philosophy</span>
+          <span className="hidden md:inline">{language === 'pt' ? 'Filosofia' : 'Philosophy'}</span>
         </TabsTrigger>
       </TabsList>
       
@@ -43,7 +45,7 @@ export function AboutTabs({
       <TabsContent value="whoIAm" className="space-y-4">
         <div className="flex items-center mb-4">
           <Code2 className="w-8 h-8 text-primary mr-3" />
-          <h3 className="text-2xl font-bold">Who I Am</h3>
+          <h3 className="text-2xl font-bold">{language === 'pt' ? 'Quem Sou' : 'Who I Am'}</h3>
         </div>
         <div className="text-muted-foreground leading-relaxed space-y-4">
           <p>{whoIAm.split('\n\n')[0]}</p>
@@ -55,7 +57,7 @@ export function AboutTabs({
       <TabsContent value="myJourney" className="space-y-4">
         <div className="flex items-center mb-4">
           <Rocket className="w-8 h-8 text-primary mr-3" />
-          <h3 className="text-2xl font-bold">My Journey</h3>
+          <h3 className="text-2xl font-bold">{language === 'pt' ? 'Minha Jornada' : 'My Journey'}</h3>
         </div>
         <div className="text-muted-foreground leading-relaxed space-y-4">
           <p>{myJourney.split('\n\n')[0]}</p>
@@ -67,7 +69,7 @@ export function AboutTabs({
       <TabsContent value="developmentPhilosophy" className="space-y-4">
         <div className="flex items-center mb-4">
           <Heart className="w-8 h-8 text-primary mr-3" />
-          <h3 className="text-2xl font-bold">Development Philosophy</h3>
+          <h3 className="text-2xl font-bold">{language === 'pt' ? 'Filosofia de Desenvolvimento' : 'Development Philosophy'}</h3>
         </div>
         <div className="text-muted-foreground leading-relaxed">
           <p>{developmentPhilosophy}</p>
@@ -75,4 +77,4 @@ export function AboutTabs({
       </TabsContent>
     </Tabs>
   );
-} 
+}

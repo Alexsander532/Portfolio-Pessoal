@@ -9,7 +9,12 @@ import {
   Globe,
   Database,
   Shield,
-  Zap
+  Zap,
+  Code,
+  Server,
+  Layers,
+  Smartphone,
+  Cog
 } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -17,6 +22,9 @@ import { Badge } from '@/components/ui/badge';
 import ecommerceImage from '@/assets/project-ecommerce.jpg';
 import taskManagerImage from '@/assets/project-taskmanager.jpg';
 import analyticsImage from '@/assets/project-analytics.jpg';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation';
 
 interface Project {
   id: string;
@@ -32,7 +40,7 @@ interface Project {
   liveUrl?: string;
   demoUrl?: string;
   icon: React.ElementType;
-  category: 'frontend' | 'fullstack' | 'backend';
+  category: ProjectCategory;
 }
 
 const projects: Project[] = [
@@ -95,7 +103,7 @@ const projects: Project[] = [
     liveUrl: 'https://taskmanager-demo.com',
     demoUrl: 'https://demo.taskmanager.com',
     icon: CheckSquare,
-    category: 'fullstack'
+    category: 'frontend'
   },
   {
     id: 'analytics',
@@ -125,11 +133,98 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/example/analytics',
     liveUrl: 'https://analytics-demo.com',
     icon: BarChart3,
-    category: 'fullstack'
+    category: 'backend'
+  },
+  {
+    id: 'mobile-app',
+    title: 'Fitness Tracking App',
+    description: 'Cross-platform mobile application for fitness tracking with personalized workout plans',
+    longDescription: 'A comprehensive mobile app built with React Native for both iOS and Android platforms. Features include workout tracking, nutrition planning, and social sharing capabilities.',
+    technologies: ['React Native', 'TypeScript', 'Firebase', 'Redux', 'Expo', 'Node.js'],
+    features: [
+      'Personalized workout plans',
+      'Progress tracking with charts',
+      'Social sharing and challenges',
+      'Offline functionality',
+      'Push notifications',
+      'Integration with fitness wearables'
+    ],
+    challenges: [
+      'Ensuring consistent UI/UX across iOS and Android',
+      'Optimizing performance for older devices',
+      'Implementing reliable offline data synchronization'
+    ],
+    results: [
+      '4.8/5 average rating on app stores',
+      '30% month-over-month user growth',
+      'Featured in health & fitness category'
+    ],
+    image: taskManagerImage, // Placeholder image
+    githubUrl: 'https://github.com/example/fitness-app',
+    liveUrl: 'https://fitnessapp.demo.com',
+    icon: Smartphone,
+    category: 'mobile'
+  },
+  {
+    id: 'automation-tool',
+    title: 'CI/CD Automation Suite',
+    description: 'DevOps automation toolkit for streamlining deployment processes and quality assurance',
+    longDescription: 'A comprehensive automation suite that integrates with popular CI/CD platforms to streamline development workflows, automate testing, and ensure reliable deployments.',
+    technologies: ['Python', 'Docker', 'Jenkins', 'Kubernetes', 'Terraform', 'GitHub Actions'],
+    features: [
+      'Automated test execution',
+      'Infrastructure as code deployment',
+      'Performance monitoring',
+      'Security scanning integration',
+      'Deployment rollback capabilities',
+      'Custom reporting dashboards'
+    ],
+    challenges: [
+      'Integrating with diverse tech stacks and platforms',
+      'Minimizing pipeline execution time',
+      'Ensuring security compliance throughout the process'
+    ],
+    results: [
+      'Deployment time reduced by 70%',
+      'Testing coverage increased to 92%',
+      'Zero downtime deployments achieved'
+    ],
+    image: analyticsImage, // Placeholder image
+    githubUrl: 'https://github.com/example/cicd-automation',
+    icon: Cog,
+    category: 'automation'
   }
 ];
 
+// Category icons mapping
+const categoryIcons = {
+  frontend: Code,
+  backend: Server,
+  fullstack: Layers,
+  mobile: Smartphone,
+  automation: Cog
+};
+
+// Category labels mapping for PT and EN
+const categoryLabels = {
+  pt: {
+    frontend: 'Frontend',
+    backend: 'Backend',
+    fullstack: 'Full Stack',
+    mobile: 'Mobile',
+    automation: 'Automações'
+  },
+  en: {
+    frontend: 'Frontend',
+    backend: 'Backend',
+    fullstack: 'Full Stack',
+    mobile: 'Mobile',
+    automation: 'Automation'
+  }
+};
+
 const Projects = () => {
+  const { language } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -155,7 +250,7 @@ const Projects = () => {
     <section ref={sectionRef} id="projects" className="py-20">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className={`text-center mb-16 transition-all duration-1000 ${
+        <div className={`text-center mb-12 transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -167,14 +262,17 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-8 mb-16 transition-all duration-500 transform ease-in-out opacity-100 scale-100">
           {projects.map((project, index) => (
             <Card 
               key={project.id}
               className={`glass-card hover-glow group cursor-pointer transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              }`}
-              style={{ animationDelay: `${index * 200}ms` }}
+              } animate-fade-in`}
+              style={{ 
+                animationDelay: `${index * 200}ms`,
+                animationFillMode: 'both' 
+              }}
               onClick={() => setSelectedProject(project)}
             >
               <CardHeader className="p-0">
@@ -189,6 +287,11 @@ const Projects = () => {
                     <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
                       <project.icon className="w-6 h-6 text-primary-foreground" />
                     </div>
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-primary/80 hover:bg-primary">
+                      {categoryLabels[language][project.category]}
+                    </Badge>
                   </div>
                 </div>
               </CardHeader>
@@ -280,6 +383,11 @@ const Projects = () => {
                   >
                     ×
                   </button>
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-primary/80">
+                      {categoryLabels[language][selectedProject.category]}
+                    </Badge>
+                  </div>
                 </div>
               </CardHeader>
 
@@ -290,7 +398,7 @@ const Projects = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-bold">{selectedProject.title}</h3>
-                    <p className="text-muted-foreground">{selectedProject.category}</p>
+                    <p className="text-muted-foreground">{categoryLabels[language][selectedProject.category]}</p>
                   </div>
                 </div>
 
