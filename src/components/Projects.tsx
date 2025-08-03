@@ -43,158 +43,73 @@ interface Project {
   category: ProjectCategory;
 }
 
-const projects: Project[] = [
-  {
-    id: 'ecommerce',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with modern React TypeScript frontend and scalable Node.js backend',
-    longDescription: 'A comprehensive e-commerce platform built with TypeScript for type safety and Tailwind CSS for rapid UI development. Features include product catalog, shopping cart, payment integration, and admin dashboard.',
-    technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Stripe', 'AWS'],
-    features: [
-      'User authentication with JWT',
-      'Product catalog with search and filters',
-      'Shopping cart and wishlist functionality',
-      'Stripe payment integration',
-      'Admin dashboard for inventory management',
-      'Real-time order tracking'
-    ],
-    challenges: [
-      'Implementing type-safe API communication between frontend and backend',
-      'Optimizing database queries for product search functionality',
-      'Handling concurrent user sessions for cart management'
-    ],
-    results: [
-      '40% faster development time using TypeScript',
-      '99.9% uptime with AWS deployment',
-      'Sub-200ms API response times'
-    ],
-    image: ecommerceImage,
-    githubUrl: 'https://github.com/example/ecommerce',
-    liveUrl: 'https://ecommerce-demo.com',
-    icon: ShoppingCart,
-    category: 'fullstack'
-  },
-  {
-    id: 'taskmanager',
-    title: 'Task Management System',
-    description: 'Collaborative task management application with real-time updates and team collaboration features',
-    longDescription: 'A powerful task management system built with React TypeScript and styled with Tailwind CSS. Features drag-and-drop functionality, real-time collaboration, and comprehensive project tracking.',
-    technologies: ['TypeScript', 'React', 'Express', 'Socket.io', 'MongoDB', 'Tailwind CSS', 'Docker'],
-    features: [
-      'Drag-and-drop task boards',
-      'Real-time collaboration with Socket.io',
-      'Team member assignment and notifications',
-      'Project timeline and milestone tracking',
-      'File attachments and comments',
-      'Mobile-responsive design'
-    ],
-    challenges: [
-      'Implementing real-time updates with TypeScript interfaces',
-      'Optimizing drag-and-drop performance with large datasets',
-      'Designing responsive layouts with Tailwind CSS'
-    ],
-    results: [
-      '60% improvement in team productivity',
-      'Real-time sync across all devices',
-      'Zero data loss with robust error handling'
-    ],
-    image: taskManagerImage,
-    githubUrl: 'https://github.com/example/taskmanager',
-    liveUrl: 'https://taskmanager-demo.com',
-    demoUrl: 'https://demo.taskmanager.com',
-    icon: CheckSquare,
-    category: 'frontend'
-  },
-  {
-    id: 'analytics',
-    title: 'Analytics Dashboard',
-    description: 'Real-time analytics dashboard with interactive data visualizations and comprehensive reporting',
-    longDescription: 'A sophisticated analytics platform featuring real-time data processing, interactive charts, and automated reporting. Built with TypeScript for reliability and Tailwind CSS for consistent styling.',
-    technologies: ['TypeScript', 'React', 'D3.js', 'Python', 'FastAPI', 'Redis', 'Tailwind CSS'],
-    features: [
-      'Real-time data visualization with D3.js',
-      'Interactive charts and graphs',
-      'Automated report generation',
-      'Custom dashboard creation',
-      'Data export functionality',
-      'Multi-tenant architecture'
-    ],
-    challenges: [
-      'Processing large datasets with TypeScript type safety',
-      'Creating responsive charts with Tailwind CSS',
-      'Implementing real-time data streaming'
-    ],
-    results: [
-      '10x faster data processing',
-      'Real-time insights with <100ms latency',
-      'Reduced reporting time by 80%'
-    ],
-    image: analyticsImage,
-    githubUrl: 'https://github.com/example/analytics',
-    liveUrl: 'https://analytics-demo.com',
-    icon: BarChart3,
-    category: 'backend'
-  },
-  {
-    id: 'mobile-app',
-    title: 'Fitness Tracking App',
-    description: 'Cross-platform mobile application for fitness tracking with personalized workout plans',
-    longDescription: 'A comprehensive mobile app built with React Native for both iOS and Android platforms. Features include workout tracking, nutrition planning, and social sharing capabilities.',
-    technologies: ['React Native', 'TypeScript', 'Firebase', 'Redux', 'Expo', 'Node.js'],
-    features: [
-      'Personalized workout plans',
-      'Progress tracking with charts',
-      'Social sharing and challenges',
-      'Offline functionality',
-      'Push notifications',
-      'Integration with fitness wearables'
-    ],
-    challenges: [
-      'Ensuring consistent UI/UX across iOS and Android',
-      'Optimizing performance for older devices',
-      'Implementing reliable offline data synchronization'
-    ],
-    results: [
-      '4.8/5 average rating on app stores',
-      '30% month-over-month user growth',
-      'Featured in health & fitness category'
-    ],
-    image: taskManagerImage, // Placeholder image
-    githubUrl: 'https://github.com/example/fitness-app',
-    liveUrl: 'https://fitnessapp.demo.com',
-    icon: Smartphone,
-    category: 'mobile'
-  },
-  {
-    id: 'automation-tool',
-    title: 'CI/CD Automation Suite',
-    description: 'DevOps automation toolkit for streamlining deployment processes and quality assurance',
-    longDescription: 'A comprehensive automation suite that integrates with popular CI/CD platforms to streamline development workflows, automate testing, and ensure reliable deployments.',
-    technologies: ['Python', 'Docker', 'Jenkins', 'Kubernetes', 'Terraform', 'GitHub Actions'],
-    features: [
-      'Automated test execution',
-      'Infrastructure as code deployment',
-      'Performance monitoring',
-      'Security scanning integration',
-      'Deployment rollback capabilities',
-      'Custom reporting dashboards'
-    ],
-    challenges: [
-      'Integrating with diverse tech stacks and platforms',
-      'Minimizing pipeline execution time',
-      'Ensuring security compliance throughout the process'
-    ],
-    results: [
-      'Deployment time reduced by 70%',
-      'Testing coverage increased to 92%',
-      'Zero downtime deployments achieved'
-    ],
-    image: analyticsImage, // Placeholder image
-    githubUrl: 'https://github.com/example/cicd-automation',
-    icon: Cog,
-    category: 'automation'
-  }
-];
+// Definição dos projetos com suporte a tradução baseada no idioma selecionado
+const projectsData = {
+  pt: [
+    {
+      id: 'ecommerce',
+      title: 'Plataforma de E-Commerce',
+      description: 'Solução full-stack de e-commerce com frontend moderno em React TypeScript e backend escalável em Node.js',
+      longDescription: 'Uma plataforma abrangente de e-commerce construída com TypeScript para segurança de tipos e Tailwind CSS para desenvolvimento rápido de UI. Recursos incluem catálogo de produtos, carrinho de compras, integração de pagamento e painel administrativo.',
+      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Stripe', 'AWS'],
+      features: [
+        'Autenticação de usuário com JWT',
+        'Catálogo de produtos com busca e filtros',
+        'Funcionalidade de carrinho e lista de desejos',
+        'Integração de pagamento com Stripe',
+        'Painel administrativo para gestão de inventário',
+        'Rastreamento de pedidos em tempo real'
+      ],
+      challenges: [
+        'Implementação de comunicação API com segurança de tipos entre frontend e backend',
+        'Otimização de consultas de banco de dados para funcionalidade de busca de produtos',
+        'Gerenciamento de sessões de usuários concorrentes para o carrinho'
+      ],
+      results: [
+        '40% de tempo de desenvolvimento mais rápido usando TypeScript',
+        '99,9% de disponibilidade com implantação AWS',
+        'Tempos de resposta da API abaixo de 200ms'
+      ],
+      image: ecommerceImage,
+      githubUrl: 'https://github.com/example/ecommerce',
+      liveUrl: 'https://ecommerce-demo.com',
+      icon: ShoppingCart,
+      category: 'fullstack'
+    },
+  ],
+  en: [
+    {
+      id: 'ecommerce',
+      title: 'E-Commerce Platform',
+      description: 'Full-stack e-commerce solution with modern React TypeScript frontend and scalable Node.js backend',
+      longDescription: 'A comprehensive e-commerce platform built with TypeScript for type safety and Tailwind CSS for rapid UI development. Features include product catalog, shopping cart, payment integration, and admin dashboard.',
+      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Stripe', 'AWS'],
+      features: [
+        'User authentication with JWT',
+        'Product catalog with search and filters',
+        'Shopping cart and wishlist functionality',
+        'Stripe payment integration',
+        'Admin dashboard for inventory management',
+        'Real-time order tracking'
+      ],
+      challenges: [
+        'Implementing type-safe API communication between frontend and backend',
+        'Optimizing database queries for product search functionality',
+        'Handling concurrent user sessions for cart management'
+      ],
+      results: [
+        '40% faster development time using TypeScript',
+        '99.9% uptime with AWS deployment',
+        'Sub-200ms API response times'
+      ],
+      image: ecommerceImage,
+      githubUrl: 'https://github.com/example/ecommerce',
+      liveUrl: 'https://ecommerce-demo.com',
+      icon: ShoppingCart,
+      category: 'fullstack'
+    },
+  ]
+};
 
 // Category icons mapping
 const categoryIcons = {
@@ -224,10 +139,13 @@ const categoryLabels = {
 };
 
 const Projects = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
+  
+  // Seleciona os projetos com base no idioma atual
+  const projects = projectsData[language];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -254,10 +172,10 @@ const Projects = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Featured <span className="gradient-text">Projects</span>
+            {language === 'pt' ? 'Projetos em ' : 'Featured '}<span className="gradient-text">{language === 'pt' ? 'Destaque' : 'Projects'}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Showcasing my expertise in TypeScript, React, and modern web development
+            {t('projectsSubtitle')}
           </p>
         </div>
 
@@ -313,7 +231,7 @@ const Projects = () => {
                   ))}
                   {project.technologies.length > 3 && (
                     <Badge variant="outline" className="text-xs">
-                      +{project.technologies.length - 3} more
+                      +{project.technologies.length - 3} {t('more')}
                     </Badge>
                   )}
                 </div>
@@ -329,7 +247,7 @@ const Projects = () => {
                     }}
                   >
                     <Play className="w-4 h-4 mr-2" />
-                    View Details
+                    {t('viewDetails')}
                   </Button>
                   <Button 
                     size="sm" 
@@ -411,7 +329,7 @@ const Projects = () => {
                   <div>
                     <h4 className="text-xl font-semibold mb-4 flex items-center">
                       <Zap className="w-5 h-5 text-primary mr-2" />
-                      Key Features
+                      {t('keyFeatures')}
                     </h4>
                     <ul className="space-y-2">
                       {selectedProject.features.map((feature, index) => (
@@ -427,11 +345,11 @@ const Projects = () => {
                   <div>
                     <h4 className="text-xl font-semibold mb-4 flex items-center">
                       <Shield className="w-5 h-5 text-primary mr-2" />
-                      Challenges & Results
+                      {t('challengesResults')}
                     </h4>
                     <div className="space-y-4">
                       <div>
-                        <h5 className="font-medium text-warning mb-2">Challenges Overcome:</h5>
+                        <h5 className="font-medium text-warning mb-2">{t('challengesOvercome')}</h5>
                         <ul className="space-y-1">
                           {selectedProject.challenges.map((challenge, index) => (
                             <li key={index} className="text-sm text-muted-foreground">
@@ -441,7 +359,7 @@ const Projects = () => {
                         </ul>
                       </div>
                       <div>
-                        <h5 className="font-medium text-success mb-2">Results Achieved:</h5>
+                        <h5 className="font-medium text-success mb-2">{t('resultsAchieved')}</h5>
                         <ul className="space-y-1">
                           {selectedProject.results.map((result, index) => (
                             <li key={index} className="text-sm text-muted-foreground">
@@ -458,7 +376,7 @@ const Projects = () => {
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-4 flex items-center">
                     <Database className="w-5 h-5 text-primary mr-2" />
-                    Technologies Used
+                    {t('technologiesUsed')}
                   </h4>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.technologies.map((tech) => (
@@ -476,7 +394,7 @@ const Projects = () => {
                     onClick={() => window.open(selectedProject.githubUrl, '_blank')}
                   >
                     <Github className="w-5 h-5 mr-2" />
-                    View Source Code
+                    {t('viewSourceCode')}
                   </Button>
                   {selectedProject.liveUrl && (
                     <Button 
@@ -484,7 +402,7 @@ const Projects = () => {
                       onClick={() => window.open(selectedProject.liveUrl, '_blank')}
                     >
                       <Globe className="w-5 h-5 mr-2" />
-                      Live Demo
+                      {t('liveDemo')}
                     </Button>
                   )}
                   {selectedProject.demoUrl && (
@@ -493,7 +411,7 @@ const Projects = () => {
                       onClick={() => window.open(selectedProject.demoUrl, '_blank')}
                     >
                       <Play className="w-5 h-5 mr-2" />
-                      Watch Demo
+                      {t('watchDemo')}
                     </Button>
                   )}
                 </div>

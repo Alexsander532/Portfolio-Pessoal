@@ -21,17 +21,21 @@ const translations = {
     downloadCV: 'Baixar Currículo',
     scrollToExplore: 'Role para explorar',
     
-    // Experiência
-    professionalJourney: 'Trajetória Profissional',
-    experienceSubtitle: 'Minha jornada na tecnologia, da educação a cargos de desenvolvimento sênior',
-    workExperience: 'Experiência de Trabalho',
-    education: 'Educação',
-    certifications: 'Certificações',
+    // Experiência - Removido
     
     // Projetos
     featuredProjects: 'Projetos em Destaque',
     projectsSubtitle: 'Demonstrando minha experiência em TypeScript, React e desenvolvimento web moderno',
     viewDetails: 'Ver Detalhes',
+    viewSourceCode: 'Ver Código Fonte',
+    liveDemo: 'Demo ao Vivo',
+    watchDemo: 'Assistir Demo',
+    keyFeatures: 'Principais Recursos',
+    challengesResults: 'Desafios & Resultados',
+    challengesOvercome: 'Desafios Superados:',
+    resultsAchieved: 'Resultados Alcançados:',
+    technologiesUsed: 'Tecnologias Utilizadas',
+    more: 'mais',
     
     // Contato
     getInTouch: 'Entre em Contato',
@@ -62,17 +66,21 @@ const translations = {
     downloadCV: 'Download CV',
     scrollToExplore: 'Scroll to explore',
     
-    // Experiência
-    professionalJourney: 'Professional Journey',
-    experienceSubtitle: 'My path in technology, from education to senior development roles',
-    workExperience: 'Work Experience',
-    education: 'Education',
-    certifications: 'Certifications',
+    // Experiência - Removido
     
     // Projetos
     featuredProjects: 'Featured Projects',
     projectsSubtitle: 'Showcasing my expertise in TypeScript, React, and modern web development',
     viewDetails: 'View Details',
+    viewSourceCode: 'View Source Code',
+    liveDemo: 'Live Demo',
+    watchDemo: 'Watch Demo',
+    keyFeatures: 'Key Features',
+    challengesResults: 'Challenges & Results',
+    challengesOvercome: 'Challenges Overcome:',
+    resultsAchieved: 'Results Achieved:',
+    technologiesUsed: 'Technologies Used',
+    more: 'more',
     
     // Contato
     getInTouch: 'Get In Touch',

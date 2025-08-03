@@ -33,7 +33,7 @@ const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -144,19 +144,19 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
+      label: language === 'pt' ? 'Email' : 'Email',
       value: 'alexsanderaugusto142019@gmail.com',
       href: 'mailto:alexsanderaugusto142019@gmail.com'
     },
     {
       icon: Phone,
-      label: 'Phone',
+      label: language === 'pt' ? 'Telefone' : 'Phone',
       value: '(31) 98256-8421',
       href: 'tel:+5531982568421'
     },
     {
       icon: MapPin,
-      label: 'Location',
+      label: language === 'pt' ? 'Localização' : 'Location',
       value: 'Belo Horizonte, Minas Gerais',
       href: null
     }
@@ -191,10 +191,10 @@ const Contact = () => {
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In <span className="gradient-text">Touch</span>
+            {language === 'pt' ? 'Entre em ' : 'Get In '}<span className="gradient-text">{language === 'pt' ? 'Contato' : 'Touch'}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ready to collaborate on your next project? Let's discuss how we can bring your ideas to life
+            {t('contactSubtitle')}
           </p>
         </div>
 
@@ -207,7 +207,7 @@ const Contact = () => {
               <CardContent className="p-5 sm:p-6 md:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold mb-5 md:mb-6 flex items-center">
                   <MessageSquare className="w-6 h-6 md:w-7 md:h-7 text-primary mr-2 md:mr-3" />
-                  Let's Connect
+                  {t('letsConnect')}
                 </h3>
                 
                 <div className="space-y-5 sm:space-y-6 mb-6 sm:mb-8">
@@ -236,7 +236,7 @@ const Contact = () => {
 
                 {/* Social Links */}
                 <div>
-                  <h4 className="font-semibold text-sm sm:text-base mb-3 md:mb-4">Follow Me</h4>
+                  <h4 className="font-semibold text-sm sm:text-base mb-3 md:mb-4">{t('followMe')}</h4>
                   <div className="flex space-x-3 md:space-x-4">
                     {socialLinks.map((social, index) => (
                       <a
@@ -257,7 +257,7 @@ const Contact = () => {
                 <div className="mt-5 sm:mt-6 md:mt-8 p-2 sm:p-3 md:p-4 rounded-lg bg-success/10 border border-success/20">
                   <div className="flex items-center">
                     <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-success mr-2" />
-                    <span className="text-success font-medium text-xs sm:text-sm md:text-base">Available for freelance projects</span>
+                    <span className="text-success font-medium text-xs sm:text-sm md:text-base">{t('availableForFreelance')}</span>
                   </div>
                 </div>
               </CardContent>
@@ -272,7 +272,7 @@ const Contact = () => {
               <CardContent className="p-5 sm:p-6 md:p-8">
                 <h3 className="text-xl sm:text-2xl font-bold mb-5 md:mb-6 flex items-center">
                   <Send className="w-6 h-6 md:w-7 md:h-7 text-primary mr-2 md:mr-3" />
-                  Send a Message
+                  {t('sendMessage')}
                 </h3>
 
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
@@ -280,7 +280,7 @@ const Contact = () => {
                     <div className="space-y-1 md:space-y-2">
                       <Label htmlFor="name" className="flex items-center text-xs md:text-sm">
                         <User className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                        Full Name
+                        {t('yourName')}
                       </Label>
                       <Input
                         id="name"
@@ -290,14 +290,14 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="glass-card border-glass-border focus:border-primary/50 text-sm md:text-base"
-                        placeholder="Your full name"
+                        placeholder={language === 'pt' ? "Seu nome completo" : "Your full name"}
                       />
                     </div>
                     
                     <div className="space-y-1 md:space-y-2">
                       <Label htmlFor="email" className="flex items-center text-xs md:text-sm">
                         <Mail className="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2" />
-                        Email Address
+                        {t('yourEmail')}
                       </Label>
                       <Input
                         id="email"
@@ -313,7 +313,7 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-1 md:space-y-2">
-                    <Label htmlFor="subject" className="text-xs md:text-sm">Subject</Label>
+                    <Label htmlFor="subject" className="text-xs md:text-sm">{t('subject')}</Label>
                     <Input
                       id="subject"
                       name="subject"
@@ -322,12 +322,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="glass-card border-glass-border focus:border-primary/50 text-sm md:text-base"
-                      placeholder="What is this regarding?"
+                      placeholder={language === 'pt' ? "Qual é o assunto?" : "What is this regarding?"}
                     />
                   </div>
 
                   <div className="space-y-1 md:space-y-2">
-                    <Label htmlFor="message" className="text-xs md:text-sm">Message</Label>
+                    <Label htmlFor="message" className="text-xs md:text-sm">{t('message')}</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -335,7 +335,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="glass-card border-glass-border focus:border-primary/50 min-h-[120px] md:min-h-[150px] text-sm md:text-base"
-                      placeholder="Tell me about your project or inquiry..."
+                      placeholder={language === 'pt' ? "Conte-me sobre seu projeto ou consulta..." : "Tell me about your project or inquiry..."}
                     />
                   </div>
 
@@ -347,11 +347,11 @@ const Contact = () => {
                     >
                       {isSubmitting ? (
                         <>
-                          <span className="animate-pulse">Sending...</span>
+                          <span className="animate-pulse">{language === 'pt' ? "Enviando..." : "Sending..."}</span>
                         </>
                       ) : (
                         <>
-                          Send Message
+                          {t('send')}
                           <Send className="w-4 h-4 md:w-5 md:h-5 ml-2" />
                         </>
                       )}
@@ -361,8 +361,7 @@ const Contact = () => {
 
                 <div className="mt-8 p-4 rounded-lg bg-primary/10 border border-primary/20">
                   <p className="text-sm text-muted-foreground">
-                    <strong>Response time:</strong> I typically respond within 24 hours. 
-                    For urgent inquiries, feel free to reach out directly via phone or email.
+                    <strong>{language === 'pt' ? "Tempo de resposta:" : "Response time:"}</strong> {language === 'pt' ? "Normalmente respondo em até 24 horas. Para consultas urgentes, sinta-se à vontade para entrar em contato diretamente por telefone ou e-mail." : "I typically respond within 24 hours. For urgent inquiries, feel free to reach out directly via phone or email."}
                   </p>
                 </div>
               </CardContent>

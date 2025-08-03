@@ -57,12 +57,6 @@ const Header = () => {
               {t('projects')}
             </button>
             <button
-              onClick={() => scrollToSection('experience')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              {t('experience')}
-            </button>
-            <button
               onClick={() => scrollToSection('contact')}
               className="text-foreground hover:text-primary transition-colors"
             >
@@ -139,12 +133,6 @@ const Header = () => {
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
                 {t('projects')}
-              </button>
-              <button
-                onClick={() => scrollToSection('experience')}
-                className="text-left text-foreground hover:text-primary transition-colors"
-              >
-                {t('experience')}
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
