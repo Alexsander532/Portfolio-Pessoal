@@ -19,7 +19,7 @@ import {
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import ecommerceImage from '@/assets/project-ecommerce.jpg';
+import portfolioImage from '@/assets/imagem_fundo_projetoportifoliopessoal.jpg';
 import taskManagerImage from '@/assets/project-taskmanager.jpg';
 import analyticsImage from '@/assets/project-analytics.jpg';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -37,8 +37,6 @@ interface Project {
   results: string[];
   image: string;
   githubUrl: string;
-  liveUrl?: string;
-  demoUrl?: string;
   icon: React.ElementType;
   category: ProjectCategory;
 }
@@ -47,65 +45,63 @@ interface Project {
 const projectsData = {
   pt: [
     {
-      id: 'ecommerce',
-      title: 'Plataforma de E-Commerce',
-      description: 'Solução full-stack de e-commerce com frontend moderno em React TypeScript e backend escalável em Node.js',
-      longDescription: 'Uma plataforma abrangente de e-commerce construída com TypeScript para segurança de tipos e Tailwind CSS para desenvolvimento rápido de UI. Recursos incluem catálogo de produtos, carrinho de compras, integração de pagamento e painel administrativo.',
-      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Stripe', 'AWS'],
+      id: 'portfolio',
+      title: 'Portfólio Pessoal',
+      description: 'Portfólio profissional full-stack desenvolvido com React, TypeScript e Tailwind CSS para mostrar projetos e habilidades',
+      longDescription: 'Um portfólio pessoal moderno e responsivo construído com React e TypeScript, utilizando Tailwind CSS e shadcn/ui para uma interface elegante e acessível. O site apresenta projetos, habilidades técnicas e informações de contato com suporte a múltiplos idiomas.',
+      technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'EmailJS', 'Vercel'],
       features: [
-        'Autenticação de usuário com JWT',
-        'Catálogo de produtos com busca e filtros',
-        'Funcionalidade de carrinho e lista de desejos',
-        'Integração de pagamento com Stripe',
-        'Painel administrativo para gestão de inventário',
-        'Rastreamento de pedidos em tempo real'
+        'Design responsivo para todos os dispositivos',
+        'Tema escuro com interface moderna e elegante',
+        'Suporte a múltiplos idiomas (Português e Inglês)',
+        'Animações suaves e transições interativas',
+        'Formulário de contato integrado com EmailJS',
+        'Exibição detalhada de projetos com modal'
       ],
       challenges: [
-        'Implementação de comunicação API com segurança de tipos entre frontend e backend',
-        'Otimização de consultas de banco de dados para funcionalidade de busca de produtos',
-        'Gerenciamento de sessões de usuários concorrentes para o carrinho'
+        'Implementação de sistema de internacionalização para suporte a múltiplos idiomas',
+        'Criação de componentes reutilizáveis com TypeScript para tipagem segura',
+        'Otimização de performance e acessibilidade em diferentes dispositivos'
       ],
       results: [
-        '40% de tempo de desenvolvimento mais rápido usando TypeScript',
-        '99,9% de disponibilidade com implantação AWS',
-        'Tempos de resposta da API abaixo de 200ms'
+        'Interface moderna e responsiva com excelente experiência do usuário',
+        'Tempo de carregamento rápido com otimização de assets',
+        'Pontuação alta em métricas de acessibilidade e SEO'
       ],
-      image: ecommerceImage,
-      githubUrl: 'https://github.com/example/ecommerce',
-      liveUrl: 'https://ecommerce-demo.com',
-      icon: ShoppingCart,
+      image: portfolioImage,
+      githubUrl: 'https://github.com/Alexsander532/Portfolio-Pessoal',
+      icon: Globe,
       category: 'fullstack'
     },
   ],
   en: [
     {
-      id: 'ecommerce',
-      title: 'E-Commerce Platform',
-      description: 'Full-stack e-commerce solution with modern React TypeScript frontend and scalable Node.js backend',
-      longDescription: 'A comprehensive e-commerce platform built with TypeScript for type safety and Tailwind CSS for rapid UI development. Features include product catalog, shopping cart, payment integration, and admin dashboard.',
-      technologies: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'Stripe', 'AWS'],
+      id: 'portfolio',
+      title: 'Personal Portfolio',
+      description: 'Full-stack professional portfolio developed with React, TypeScript and Tailwind CSS to showcase projects and skills',
+      longDescription: 'A modern and responsive personal portfolio built with React and TypeScript, using Tailwind CSS and shadcn/ui for an elegant and accessible interface. The website showcases projects, technical skills, and contact information with multi-language support.',
+      technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'EmailJS', 'Vercel'],
       features: [
-        'User authentication with JWT',
-        'Product catalog with search and filters',
-        'Shopping cart and wishlist functionality',
-        'Stripe payment integration',
-        'Admin dashboard for inventory management',
-        'Real-time order tracking'
+        'Responsive design for all devices',
+        'Dark theme with modern and elegant interface',
+        'Multi-language support (Portuguese and English)',
+        'Smooth animations and interactive transitions',
+        'Contact form integrated with EmailJS',
+        'Detailed project display with modal'
       ],
       challenges: [
-        'Implementing type-safe API communication between frontend and backend',
-        'Optimizing database queries for product search functionality',
-        'Handling concurrent user sessions for cart management'
+        'Implementation of internationalization system for multi-language support',
+        'Creation of reusable components with TypeScript for type safety',
+        'Performance and accessibility optimization across different devices'
       ],
       results: [
-        '40% faster development time using TypeScript',
-        '99.9% uptime with AWS deployment',
-        'Sub-200ms API response times'
+        'Modern and responsive interface with excellent user experience',
+        'Fast loading time with asset optimization',
+        'High score in accessibility and SEO metrics'
       ],
-      image: ecommerceImage,
-      githubUrl: 'https://github.com/example/ecommerce',
-      liveUrl: 'https://ecommerce-demo.com',
-      icon: ShoppingCart,
+      image: portfolioImage,
+      githubUrl: 'https://github.com/Alexsander532/Portfolio-Pessoal',
+      icon: Globe,
       category: 'fullstack'
     },
   ]
@@ -191,7 +187,7 @@ const Projects = () => {
                 animationDelay: `${index * 200}ms`,
                 animationFillMode: 'both' 
               }}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => setSelectedProject(project as Project)}
             >
               <CardHeader className="p-0">
                 <div className="relative overflow-hidden rounded-t-lg">
@@ -243,7 +239,7 @@ const Projects = () => {
                     className="flex-1 bg-gradient-primary"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedProject(project);
+                      setSelectedProject(project as Project);
                     }}
                   >
                     <Play className="w-4 h-4 mr-2" />
@@ -259,18 +255,6 @@ const Projects = () => {
                   >
                     <Github className="w-4 h-4" />
                   </Button>
-                  {project.liveUrl && (
-                    <Button 
-                      size="sm" 
-                      variant="outline"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        window.open(project.liveUrl, '_blank');
-                      }}
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  )}
                 </div>
               </CardContent>
             </Card>
@@ -396,24 +380,7 @@ const Projects = () => {
                     <Github className="w-5 h-5 mr-2" />
                     {t('viewSourceCode')}
                   </Button>
-                  {selectedProject.liveUrl && (
-                    <Button 
-                      variant="outline"
-                      onClick={() => window.open(selectedProject.liveUrl, '_blank')}
-                    >
-                      <Globe className="w-5 h-5 mr-2" />
-                      {t('liveDemo')}
-                    </Button>
-                  )}
-                  {selectedProject.demoUrl && (
-                    <Button 
-                      variant="outline"
-                      onClick={() => window.open(selectedProject.demoUrl, '_blank')}
-                    >
-                      <Play className="w-5 h-5 mr-2" />
-                      {t('watchDemo')}
-                    </Button>
-                  )}
+
                 </div>
               </CardContent>
             </Card>
