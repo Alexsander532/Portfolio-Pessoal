@@ -1,7 +1,9 @@
-import { Github, Linkedin, Mail, Heart, Code } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   const quickLinks = [
     { name: 'Home', href: '#home' },
@@ -15,9 +17,7 @@ const Footer = () => {
     'TypeScript',
     'React',
     'Node.js',
-    'Tailwind CSS',
-    'Python',
-    'AWS'
+    'Tailwind CSS'
   ];
 
   const scrollToSection = (href: string) => {
@@ -37,11 +37,10 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-xl">A</span>
               </div>
-              <span className="text-2xl font-bold gradient-text">Alex Johnson</span>
+              <span className="text-2xl font-bold gradient-text">Alexsander Augusto</span>
             </div>
             <p className="text-muted-foreground mb-6 leading-relaxed max-w-md">
-              Passionate fullstack developer creating robust, scalable solutions with 
-              modern technologies. Specializing in TypeScript, React, and cloud architecture.
+              {t('footerDescription')}
             </p>
             
             {/* Social Links */}
@@ -110,15 +109,11 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center text-muted-foreground text-sm mb-4 md:mb-0">
-            <span>© {currentYear} Alex Johnson. Made with</span>
-            <Heart className="w-4 h-4 mx-2 text-red-500" />
-            <span>and</span>
-            <Code className="w-4 h-4 mx-2 text-primary" />
-            <span>using TypeScript & Tailwind CSS</span>
+            <span>© {currentYear} Alexsander Augusto</span>
           </div>
           
-          <div className="text-sm text-muted-foreground">
-            Built with React, TypeScript, and Tailwind CSS
+          <div className="text-muted-foreground text-sm">
+            {t('builtWith')}
           </div>
         </div>
       </div>

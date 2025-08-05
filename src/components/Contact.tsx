@@ -184,7 +184,7 @@ const Contact = () => {
   ];
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20">
+    <section ref={sectionRef} id="contact" className="pt-10 pb-20">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className={`text-center mb-16 transition-all duration-1000 ${
@@ -359,11 +359,7 @@ const Contact = () => {
                   </div>
                 </form>
 
-                <div className="mt-8 p-4 rounded-lg bg-primary/10 border border-primary/20">
-                  <p className="text-sm text-muted-foreground">
-                    <strong>{language === 'pt' ? "Tempo de resposta:" : "Response time:"}</strong> {language === 'pt' ? "Normalmente respondo em até 24 horas. Para consultas urgentes, sinta-se à vontade para entrar em contato diretamente por telefone ou e-mail." : "I typically respond within 24 hours. For urgent inquiries, feel free to reach out directly via phone or email."}
-                  </p>
-                </div>
+
               </CardContent>
             </Card>
           </div>

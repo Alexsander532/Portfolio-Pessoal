@@ -20,7 +20,7 @@ const About = () => {
   const { t, language } = useLanguage();
 
   // Textos em português
-  const whoIAmTextPT = `Olá! Sou Alexsander Lima, um desenvolvedor fullstack que respira tecnologia e inovação. Minha paixão genuína por desvendar como as coisas funcionam 'nos bastidores' impulsionou minha jornada, e hoje, com um olhar aguçado para a eficiência e a usabilidade, transformo ideias e desafios em soluções digitais robustas e completas.
+  const whoIAmTextPT = `Olá! Sou Alexsander Augusto, um desenvolvedor fullstack que respira tecnologia e inovação. Minha paixão genuína por desvendar como as coisas funcionam 'nos bastidores' impulsionou minha jornada, e hoje, com um olhar aguçado para a eficiência e a usabilidade, transformo ideias e desafios em soluções digitais robustas e completas.
 
 Vejo a tecnologia como ponte entre problemas complexos e soluções elegantes. Além de minhas skills técnicas, trago para a equipe um espírito colaborativo, proativo, adaptável e comunicativo. Sou um aprendiz contínuo, aplicando ativamente novos conhecimentos para criar experiências digitais de alto impacto e excelência.`;
 
@@ -31,7 +31,7 @@ Sempre em busca do próximo desafio, dedico tempo diário para estudar novas tec
   const developmentPhilosophyTextPT = `Acredito em código limpo, bem documentado e testável. Priorizo arquiteturas escaláveis, componentização inteligente e metodologias ágeis, valorizando sempre o trabalho em equipe para alcançar os melhores resultados. A experiência do usuário e a qualidade do código são pilares fundamentais em cada projeto.`;
 
   // Textos em inglês
-  const whoIAmTextEN = `Hello! I'm Alexsander Lima, a fullstack developer who breathes technology and innovation. My genuine passion for unraveling how things work 'behind the scenes' has driven my journey, and today, with a keen eye for efficiency and usability, I transform ideas and challenges into robust and complete digital solutions.
+  const whoIAmTextEN = `Hello! I'm Alexsander Augusto, a fullstack developer who breathes technology and innovation. My genuine passion for unraveling how things work 'behind the scenes' has driven my journey, and today, with a keen eye for efficiency and usability, I transform ideas and challenges into robust and complete digital solutions.
 
 I see technology as a bridge between complex problems and elegant solutions. Beyond my technical skills, I bring to the team a collaborative, proactive, adaptable, and communicative spirit. I am a continuous learner, actively applying new knowledge to create high-impact and excellent digital experiences.`;
 

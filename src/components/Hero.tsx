@@ -108,7 +108,7 @@ const Hero = () => {
               <Github className="w-6 h-6 text-muted-foreground group-hover:text-primary transition-colors" />
             </a>
             <a
-              href="https://www.linkedin.com/in/alexsander-augusto-lima-9b49221b4"
+              href="https://www.linkedin.com/in/alexsander-augusto-9b49221b4"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full glass-card hover:bg-primary/10 hover:border-primary/40 

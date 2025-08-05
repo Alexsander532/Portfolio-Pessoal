@@ -48,7 +48,11 @@ const translations = {
     yourEmail: 'Seu Email',
     subject: 'Assunto',
     message: 'Mensagem',
-    send: 'Enviar'
+    send: 'Enviar',
+    
+    // Footer
+    footerDescription: 'Desenvolvedor fullstack apaixonado criando soluções robustas e escaláveis com tecnologias modernas.',
+    builtWith: 'Construído com React, TypeScript e Tailwind CSS'
   },
   en: {
     // Header
@@ -93,7 +97,11 @@ const translations = {
     yourEmail: 'Your Email',
     subject: 'Subject',
     message: 'Message',
-    send: 'Send'
+    send: 'Send',
+    
+    // Footer
+    footerDescription: 'Passionate fullstack developer creating robust, scalable solutions with modern technologies.',
+    builtWith: 'Built with React, TypeScript, and Tailwind CSS'
   }
 };
 

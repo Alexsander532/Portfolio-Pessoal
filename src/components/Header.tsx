@@ -33,7 +33,7 @@ const Header = () => {
         <div className="grid grid-cols-3 items-center">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-xl font-bold gradient-text">Alexsander Lima</span>
+            <span className="text-xl font-bold gradient-text">Alexsander Augusto</span>
           </div>
 
           {/* Desktop Navigation - Centered */}
