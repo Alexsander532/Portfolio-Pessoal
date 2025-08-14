@@ -47,7 +47,7 @@ const projectsData = {
     {
       id: 'portfolio',
       title: 'Portfólio Pessoal',
-      description: 'Portfólio profissional full-stack desenvolvido com React, TypeScript e Tailwind CSS para mostrar projetos e habilidades',
+      description: 'Portfólio profissional full-stack desenvolvido com React, TypeScript e Tailwind CSS para mostrar projetos e habilidades.',
       longDescription: 'Um portfólio pessoal moderno e responsivo construído com React e TypeScript, utilizando Tailwind CSS e shadcn/ui para uma interface elegante e acessível. O site apresenta projetos, habilidades técnicas e informações de contato com suporte a múltiplos idiomas.',
       technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'EmailJS', 'Vercel'],
       features: [
@@ -73,12 +73,72 @@ const projectsData = {
       icon: Globe,
       category: 'fullstack'
     },
+    {
+      id: 'todo-list',
+      title: 'Todo List (Java/SpringBoot)',
+      description: 'Aplicação de lista de tarefas desenvolvida com Java e Spring Boot, focada em produtividade e organização.',
+      longDescription: 'Uma aplicação web para gerenciamento de tarefas, construída com Java, Spring Boot e banco de dados relacional. Permite criar, editar, excluir e marcar tarefas como concluídas, com autenticação e interface responsiva.',
+      technologies: ['Java 17', 'Spring Boot 3.5.4', 'Spring Data JPA', 'H2 Database', 'BCrypt', 'Lombok', 'Maven'],
+      features: [
+        'CRUD completo de tarefas',
+        'Autenticação de usuários',
+        'Interface responsiva',
+        'Persistência em banco de dados H2 Database',
+        'Filtros e busca de tarefas'
+      ],
+      challenges: [
+        'Implementação de autenticação segura',
+        'Integração com banco de dados relacional',
+        'Design intuitivo e responsivo'
+      ],
+      results: [
+        'Facilita a organização pessoal e produtividade',
+        'Código limpo e bem estruturado',
+        'Pronto para deploy em servidores Java'
+      ],
+      image: taskManagerImage,
+      githubUrl: 'https://github.com/Alexsander532/Todolist_JavaSpringBoot',
+      icon: CheckSquare,
+      category: 'backend'
+    },
+    {
+      id: 'video-api',
+      title: 'API de Gerenciamento de Vídeos (Node.js + Fastify)',
+      description: 'API RESTful para gerenciamento de vídeos, desenvolvida com Node.js, Fastify e PostgreSQL (Neon).',
+      longDescription: 'API REST para gerenciamento de vídeos, desenvolvida com Node.js e Fastify. O projeto aborda rotas HTTP, manipulação assíncrona de dados, parâmetros de rota e query, persistência em memória e PostgreSQL (Neon), além de deploy automatizado com Render.',
+      technologies: ['Node.js', 'Fastify', 'JavaScript', 'PostgreSQL', 'Neon', 'Render'],
+      features: [
+        'CRUD de vídeos com métodos HTTP (GET, POST, PUT, DELETE)',
+        'Encapsulamento e POO com JavaScript',
+        'Async/await para operações assíncronas',
+        'Query Parameters e Route Parameters',
+        'Retorno e consumo de dados em JSON',
+        'Armazenamento em memória local para testes',
+        'Migração para banco de dados online (Neon/PostgreSQL)',
+        'Deploy automatizado com Render'
+      ],
+      challenges: [
+        'Estruturação de rotas RESTful com Fastify',
+        'Persistência de dados com PostgreSQL',
+        'Configuração de ambiente para deploy na nuvem',
+        'Boas práticas de organização de código'
+      ],
+      results: [
+        'API funcional e escalável pronta para consumo por aplicações front-end',
+        'Aprendizado prático de Fastify, PostgreSQL e deploy com Render',
+        'Código limpo e organizado, fácil de manter e evoluir'
+      ],
+      image: analyticsImage,
+      githubUrl: 'https://github.com/Alexsander532/Projeto_Gerenciamentovideos_nodejs',
+      icon: Server,
+      category: 'backend'
+    },
   ],
   en: [
     {
       id: 'portfolio',
       title: 'Personal Portfolio',
-      description: 'Full-stack professional portfolio developed with React, TypeScript and Tailwind CSS to showcase projects and skills',
+      description: 'Full-stack professional portfolio developed with React, TypeScript and Tailwind CSS to showcase projects and skills.',
       longDescription: 'A modern and responsive personal portfolio built with React and TypeScript, using Tailwind CSS and shadcn/ui for an elegant and accessible interface. The website showcases projects, technical skills, and contact information with multi-language support.',
       technologies: ['TypeScript', 'React', 'Vite', 'Tailwind CSS', 'shadcn/ui', 'EmailJS', 'Vercel'],
       features: [
@@ -103,6 +163,66 @@ const projectsData = {
       githubUrl: 'https://github.com/Alexsander532/Portfolio-Pessoal',
       icon: Globe,
       category: 'fullstack'
+    },
+    {
+      id: 'todo-list',
+      title: 'Todo List (Java/SpringBoot)',
+      description: 'Task list application developed with Java and Spring Boot, focused on productivity and organization.',
+      longDescription: 'A web application for task management, built with Java, Spring Boot and relational database. Allows creating, editing, deleting and marking tasks as completed, with authentication and responsive interface.',
+      technologies: ['Java 17', 'Spring Boot 3.5.4', 'Spring Data JPA', 'H2 Database', 'BCrypt', 'Lombok', 'Maven'],
+      features: [
+        'Full CRUD for tasks',
+        'User authentication',
+        'Responsive interface',
+        'Persistence in H2 Database',
+        'Task filters and search'
+      ],
+      challenges: [
+        'Implementation of secure authentication',
+        'Integration with relational database',
+        'Intuitive and responsive design'
+      ],
+      results: [
+        'Facilitates personal organization and productivity',
+        'Clean and well-structured code',
+        'Ready for deployment on Java servers'
+      ],
+      image: taskManagerImage,
+      githubUrl: 'https://github.com/Alexsander532/Todolist_JavaSpringBoot',
+      icon: CheckSquare,
+      category: 'backend'
+    },
+    {
+      id: 'video-api',
+      title: 'Video Management API (Node.js + Fastify)',
+      description: 'RESTful API for video management, developed with Node.js, Fastify and PostgreSQL (Neon).',
+      longDescription: 'REST API for video management, built with Node.js and Fastify. Covers HTTP routes, async data handling, route/query parameters, in-memory and PostgreSQL (Neon) persistence, and automated deployment with Render.',
+      technologies: ['Node.js', 'Fastify', 'JavaScript', 'PostgreSQL', 'Neon', 'Render'],
+      features: [
+        'CRUD for videos with HTTP methods (GET, POST, PUT, DELETE)',
+        'Encapsulation and OOP with JavaScript',
+        'Async/await for asynchronous operations',
+        'Query Parameters and Route Parameters',
+        'Returning and consuming data in JSON',
+        'Local memory storage for tests',
+        'Migration to online database (Neon/PostgreSQL)',
+        'Automated deployment with Render'
+      ],
+      challenges: [
+        'Structuring RESTful routes with Fastify',
+        'Data persistence with PostgreSQL',
+        'Cloud deployment environment setup',
+        'Best practices for code organization'
+      ],
+      results: [
+        'Functional and scalable API ready for consumption by front-end applications',
+        'Practical learning of Fastify, PostgreSQL and deployment with Render',
+        'Clean and organized code, easy to maintain and evolve'
+      ],
+      image: analyticsImage,
+      githubUrl: 'https://github.com/Alexsander532/Projeto_Gerenciamentovideos_nodejs',
+      icon: Server,
+      category: 'backend'
     },
   ]
 };
