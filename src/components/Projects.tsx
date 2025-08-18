@@ -14,7 +14,9 @@ import {
   Server,
   Layers,
   Smartphone,
-  Cog
+  Cog,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -22,6 +24,14 @@ import { Badge } from '@/components/ui/badge';
 import portfolioImage from '@/assets/imagem_fundo_projetoportifoliopessoal.jpg';
 import taskManagerImage from '@/assets/project-taskmanager.jpg';
 import analyticsImage from '@/assets/project-analytics.jpg';
+import getkids1 from '@/assets/getkids1.jpg';
+import getkids2 from '@/assets/getkids2.jpg';
+import getkids3 from '@/assets/getkids3.jpg';
+import getkids4 from '@/assets/getkids4.jpg';
+import getkids5 from '@/assets/getkids5.jpg';
+import colbat1 from '@/assets/colbat1.png';
+import colbat2 from '@/assets/colbat2.jpg';
+import colbat3 from '@/assets/colbat3.jpg';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation';
@@ -36,6 +46,7 @@ interface Project {
   challenges: string[];
   results: string[];
   image: string;
+  images?: string[];
   githubUrl: string;
   icon: React.ElementType;
   category: ProjectCategory;
@@ -133,6 +144,72 @@ const projectsData = {
       icon: Server,
       category: 'backend'
     },
+    {
+      id: 'getkids',
+      title: 'GetKids',
+      description: 'App de monitoramento infantil para ministérios infantis de igrejas, desenvolvido com React Native e tecnologias modernas.',
+      longDescription: 'GetKids é um aplicativo mobile completo para monitoramento infantil em ministérios de igrejas. Desenvolvido com React Native e Expo, utiliza Supabase para backend e Node.js com TypeScript. O app implementa criptografia avançada para segurança, seguindo princípios de Clean Architecture, Clean Code e Domain Driven Design (DDD), desenvolvido com metodologias ágeis.',
+      technologies: ['React Native', 'Expo', 'Supabase', 'Node.js', 'TypeScript', 'Criptografia Avançada'],
+      features: [
+        'Monitoramento em tempo real de crianças',
+        'Sistema de check-in/check-out seguro',
+        'Interface intuitiva para líderes de ministério',
+        'Criptografia avançada para proteção de dados',
+        'Notificações push para responsáveis',
+        'Relatórios detalhados de frequência',
+        'Sistema de autenticação robusto'
+      ],
+      challenges: [
+        'Implementação de criptografia avançada para dados sensíveis',
+        'Arquitetura limpa seguindo princípios DDD',
+        'Sincronização em tempo real entre dispositivos',
+        'Interface responsiva para diferentes tamanhos de tela'
+      ],
+      results: [
+        'Maior segurança no controle de crianças em igrejas',
+        'Redução significativa no tempo de check-in/check-out',
+        'Interface amigável que facilita o uso por voluntários',
+        'Sistema escalável e de fácil manutenção'
+      ],
+      image: getkids1,
+      images: [getkids1, getkids2, getkids3, getkids4, getkids5],
+      githubUrl: '#',
+      icon: Smartphone,
+      category: 'mobile'
+    },
+    {
+      id: 'colbat',
+      title: 'APP Colégio Batista Getsemâni',
+      description: 'App de monitoramento escolar para controle administrativo de entrada e saída de alunos, focado na segurança escolar.',
+      longDescription: 'Aplicativo mobile desenvolvido para a administração do Colégio Batista Getsemâni, permitindo o controle eficiente de entrada e saída dos alunos. Desenvolvido em Flutter com backend em Supabase e Node.js com TypeScript, implementa criptografia avançada e segue princípios de Clean Code, Clean Architecture e DDD, utilizando metodologias ágeis.',
+      technologies: ['Flutter', 'Supabase', 'Node.js', 'TypeScript', 'Criptografia Avançada', 'Clean Architecture'],
+      features: [
+        'Controle de acesso de alunos em tempo real',
+        'Sistema de identificação por QR Code ou biometria',
+        'Dashboard administrativo completo',
+        'Notificações automáticas para responsáveis',
+        'Relatórios de frequência e pontualidade',
+        'Sistema de backup automático de dados',
+        'Interface administrativa intuitiva'
+      ],
+      challenges: [
+        'Integração com sistemas de identificação biométrica',
+        'Implementação de arquitetura limpa e escalável',
+        'Sincronização de dados em tempo real',
+        'Garantia de segurança e privacidade dos dados'
+      ],
+      results: [
+        'Aumento da segurança no ambiente escolar',
+        'Automatização completa do controle de acesso',
+        'Maior tranquilidade para pais e responsáveis',
+        'Redução de custos operacionais da instituição'
+      ],
+      image: colbat1,
+      images: [colbat1, colbat2, colbat3],
+      githubUrl: '#',
+      icon: Smartphone,
+      category: 'mobile'
+    },
   ],
   en: [
     {
@@ -224,6 +301,72 @@ const projectsData = {
       icon: Server,
       category: 'backend'
     },
+    {
+      id: 'getkids',
+      title: 'GetKids',
+      description: 'Child monitoring app for church children\'s ministries, developed with React Native and modern technologies.',
+      longDescription: 'GetKids is a complete mobile application for child monitoring in church ministries. Developed with React Native and Expo, it uses Supabase for backend and Node.js with TypeScript. The app implements advanced encryption for security, following Clean Architecture, Clean Code and Domain Driven Design (DDD) principles, developed with agile methodologies.',
+      technologies: ['React Native', 'Expo', 'Supabase', 'Node.js', 'TypeScript', 'Advanced Encryption'],
+      features: [
+        'Real-time child monitoring',
+        'Secure check-in/check-out system',
+        'Intuitive interface for ministry leaders',
+        'Advanced encryption for data protection',
+        'Push notifications for guardians',
+        'Detailed attendance reports',
+        'Robust authentication system'
+      ],
+      challenges: [
+        'Implementation of advanced encryption for sensitive data',
+        'Clean architecture following DDD principles',
+        'Real-time synchronization between devices',
+        'Responsive interface for different screen sizes'
+      ],
+      results: [
+        'Enhanced security in child control at churches',
+        'Significant reduction in check-in/check-out time',
+        'User-friendly interface that facilitates use by volunteers',
+        'Scalable and easy-to-maintain system'
+      ],
+      image: getkids1,
+      images: [getkids1, getkids2, getkids3, getkids4, getkids5],
+      githubUrl: '#',
+      icon: Smartphone,
+      category: 'mobile'
+    },
+    {
+      id: 'colbat',
+      title: 'Colégio Batista Getsemâni APP',
+      description: 'School monitoring app for administrative control of student entry and exit, focused on school security.',
+      longDescription: 'Mobile application developed for the administration of Colégio Batista Getsemâni, allowing efficient control of student entry and exit. Developed in Flutter with Supabase backend and Node.js with TypeScript, it implements advanced encryption and follows Clean Code, Clean Architecture and DDD principles, using agile methodologies.',
+      technologies: ['Flutter', 'Supabase', 'Node.js', 'TypeScript', 'Advanced Encryption', 'Clean Architecture'],
+      features: [
+        'Real-time student access control',
+        'QR Code or biometric identification system',
+        'Complete administrative dashboard',
+        'Automatic notifications for guardians',
+        'Attendance and punctuality reports',
+        'Automatic data backup system',
+        'Intuitive administrative interface'
+      ],
+      challenges: [
+        'Integration with biometric identification systems',
+        'Implementation of clean and scalable architecture',
+        'Real-time data synchronization',
+        'Ensuring data security and privacy'
+      ],
+      results: [
+        'Increased security in the school environment',
+        'Complete automation of access control',
+        'Greater peace of mind for parents and guardians',
+        'Reduction of institutional operational costs'
+      ],
+      image: colbat1,
+      images: [colbat1, colbat2, colbat3],
+      githubUrl: '#',
+      icon: Smartphone,
+      category: 'mobile'
+    },
   ]
 };
 
@@ -258,10 +401,33 @@ const Projects = () => {
   const { language, t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const sectionRef = useRef<HTMLElement>(null);
   
   // Seleciona os projetos com base no idioma atual
   const projects = projectsData[language];
+
+  // Funções para o carrossel de imagens
+  const nextImage = () => {
+    if (selectedProject?.images) {
+      setCurrentImageIndex((prev) => 
+        prev === selectedProject.images!.length - 1 ? 0 : prev + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (selectedProject?.images) {
+      setCurrentImageIndex((prev) => 
+        prev === 0 ? selectedProject.images!.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const selectProject = (project: Project) => {
+    setSelectedProject(project);
+    setCurrentImageIndex(0);
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -307,15 +473,39 @@ const Projects = () => {
                 animationDelay: `${index * 200}ms`,
                 animationFillMode: 'both' 
               }}
-              onClick={() => setSelectedProject(project as Project)}
+              onClick={() => selectProject(project as Project)}
             >
               <CardHeader className="p-0">
-                <div className="relative overflow-hidden rounded-t-lg">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                <div className="relative overflow-hidden rounded-t-lg group/image">
+                  {project.images && project.images.length > 1 ? (
+                    // Carrossel no card
+                    <div className="relative">
+                      <img 
+                        src={project.images[0]} 
+                        alt={project.title}
+                        className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      
+                      {/* Indicador de múltiplas imagens */}
+                      <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
+                        <div className="w-3 h-3 grid grid-cols-2 gap-0.5">
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white rounded-full"></div>
+                          <div className="w-1 h-1 bg-white/50 rounded-full"></div>
+                        </div>
+                        <span>{project.images.length}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    // Imagem única no card
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  )}
+                  
                   <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
                   <div className="absolute top-4 left-4">
                     <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
@@ -359,7 +549,7 @@ const Projects = () => {
                     className="flex-1 bg-gradient-primary"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedProject(project as Project);
+                      selectProject(project as Project);
                     }}
                   >
                     <Play className="w-4 h-4 mr-2" />
@@ -393,19 +583,59 @@ const Projects = () => {
             >
               <CardHeader className="p-0">
                 <div className="relative">
-                  <img 
-                    src={selectedProject.image} 
-                    alt={selectedProject.title}
-                    className="w-full h-64 object-cover"
-                  />
+                  {selectedProject.images && selectedProject.images.length > 1 ? (
+                    // Carrossel de imagens
+                    <div className="relative">
+                      <img 
+                        src={selectedProject.images[currentImageIndex]} 
+                        alt={`${selectedProject.title} - ${currentImageIndex + 1}`}
+                        className="w-full h-64 object-cover transition-opacity duration-300"
+                      />
+                      
+                      {/* Botões de navegação */}
+                      <button 
+                        onClick={prevImage}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors z-10"
+                      >
+                        <ChevronLeft className="w-5 h-5" />
+                      </button>
+                      <button 
+                        onClick={nextImage}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors z-10"
+                      >
+                        <ChevronRight className="w-5 h-5" />
+                      </button>
+                      
+                      {/* Indicadores */}
+                      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                        {selectedProject.images.map((_, index) => (
+                          <button
+                            key={index}
+                            onClick={() => setCurrentImageIndex(index)}
+                            className={`w-2 h-2 rounded-full transition-colors ${
+                              index === currentImageIndex ? 'bg-primary' : 'bg-white/50'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    // Imagem única
+                    <img 
+                      src={selectedProject.image} 
+                      alt={selectedProject.title}
+                      className="w-full h-64 object-cover"
+                    />
+                  )}
+                  
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                   <button 
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors z-20"
                   >
                     ×
                   </button>
-                  <div className="absolute top-4 left-4">
+                  <div className="absolute top-4 left-4 z-20">
                     <Badge className="bg-primary/80">
                       {categoryLabels[language][selectedProject.category]}
                     </Badge>
@@ -490,6 +720,73 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* App Screenshots - Only for mobile projects */}
+                {selectedProject.category === 'mobile' && selectedProject.images && selectedProject.images.length > 0 && (
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4 flex items-center">
+                      <Smartphone className="w-5 h-5 text-primary mr-2" />
+                      {language === 'pt' ? 'Screenshots do App' : 'App Screenshots'}
+                    </h4>
+                    <div className="relative">
+                      {/* Carrossel de imagens do app */}
+                      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg p-6 overflow-hidden">
+                        <div className="flex justify-center">
+                          <div className="relative max-w-xs mx-auto">
+                            <img 
+                              src={selectedProject.images[currentImageIndex]} 
+                              alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
+                              className="w-full h-auto rounded-lg shadow-2xl border-4 border-gray-300 dark:border-gray-600 transition-all duration-300"
+                              style={{ maxHeight: '500px', objectFit: 'contain' }}
+                            />
+                            
+                            {/* Navegação do carrossel */}
+                            {selectedProject.images.length > 1 && (
+                              <>
+                                <button 
+                                  onClick={prevImage}
+                                  className="absolute left-4 top-1/2 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
+                                >
+                                  <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+                                </button>
+                                <button 
+                                  onClick={nextImage}
+                                  className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
+                                >
+                                  <ChevronRight className="w-6 h-6 text-primary-foreground" />
+                                </button>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                        
+                        {/* Indicadores de posição */}
+                        {selectedProject.images.length > 1 && (
+                          <div className="flex justify-center mt-6 gap-2">
+                            {selectedProject.images.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setCurrentImageIndex(index)}
+                                className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                                  index === currentImageIndex 
+                                    ? 'bg-primary scale-110' 
+                                    : 'bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        )}
+                        
+                        {/* Contador de imagens */}
+                        {selectedProject.images.length > 1 && (
+                          <div className="absolute top-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
+                            {currentImageIndex + 1} / {selectedProject.images.length}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 {/* Action Buttons */}
                 <div className="flex flex-wrap gap-4">
