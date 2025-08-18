@@ -152,6 +152,7 @@ const projectsData = {
       technologies: ['React Native', 'Expo', 'Supabase', 'Node.js', 'TypeScript', 'Criptografia Avançada'],
       features: [
         'Monitoramento em tempo real de crianças',
+        'Chat em tempo real entre líderes e responsáveis',
         'Sistema de check-in/check-out seguro',
         'Interface intuitiva para líderes de ministério',
         'Criptografia avançada para proteção de dados',
@@ -173,7 +174,7 @@ const projectsData = {
       ],
       image: getkids1,
       images: [getkids1, getkids2, getkids3, getkids4, getkids5],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Alexsander532',
       icon: Smartphone,
       category: 'mobile'
     },
@@ -185,6 +186,7 @@ const projectsData = {
       technologies: ['Flutter', 'Supabase', 'Node.js', 'TypeScript', 'Criptografia Avançada', 'Clean Architecture'],
       features: [
         'Controle de acesso de alunos em tempo real',
+        'Chat em tempo real entre administração e responsáveis',
         'Sistema de identificação por QR Code ou biometria',
         'Dashboard administrativo completo',
         'Notificações automáticas para responsáveis',
@@ -206,7 +208,7 @@ const projectsData = {
       ],
       image: colbat1,
       images: [colbat1, colbat2, colbat3],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Alexsander532',
       icon: Smartphone,
       category: 'mobile'
     },
@@ -309,6 +311,7 @@ const projectsData = {
       technologies: ['React Native', 'Expo', 'Supabase', 'Node.js', 'TypeScript', 'Advanced Encryption'],
       features: [
         'Real-time child monitoring',
+        'Real-time chat between leaders and guardians',
         'Secure check-in/check-out system',
         'Intuitive interface for ministry leaders',
         'Advanced encryption for data protection',
@@ -330,7 +333,7 @@ const projectsData = {
       ],
       image: getkids1,
       images: [getkids1, getkids2, getkids3, getkids4, getkids5],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Alexsander532',
       icon: Smartphone,
       category: 'mobile'
     },
@@ -342,6 +345,7 @@ const projectsData = {
       technologies: ['Flutter', 'Supabase', 'Node.js', 'TypeScript', 'Advanced Encryption', 'Clean Architecture'],
       features: [
         'Real-time student access control',
+        'Real-time chat between administration and guardians',
         'QR Code or biometric identification system',
         'Complete administrative dashboard',
         'Automatic notifications for guardians',
@@ -363,7 +367,7 @@ const projectsData = {
       ],
       image: colbat1,
       images: [colbat1, colbat2, colbat3],
-      githubUrl: '#',
+      githubUrl: 'https://github.com/Alexsander532',
       icon: Smartphone,
       category: 'mobile'
     },
