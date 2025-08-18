@@ -32,6 +32,9 @@ import getkids5 from '@/assets/getkids5.jpg';
 import colbat1 from '@/assets/colbat1.png';
 import colbat2 from '@/assets/colbat2.jpg';
 import colbat3 from '@/assets/colbat3.jpg';
+import dashboard1 from '@/assets/Dashboard1.png';
+import dashboard2 from '@/assets/Dashboard2.png';
+import dashboard3 from '@/assets/Dashboard3.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation';
@@ -212,6 +215,39 @@ const projectsData = {
       icon: Smartphone,
       category: 'mobile'
     },
+    {
+      id: 'brancia-dashboard',
+      title: 'Dashboard de Vendas - Brancia',
+      description: 'Dashboard completo para empresa nacional de importação com visualização de dados de vendas, gerenciamento de estoque e controle financeiro integrado com APIs do Mercado Livre e Magazine Luiza.',
+      longDescription: 'Dashboard empresarial desenvolvido para a Brancia, empresa nacional de importação. O sistema oferece visualização completa de dados de vendas, gerenciamento de estoque em tempo real e controle financeiro, com integração direta às APIs do Mercado Livre e Magazine Luiza. Desenvolvido com React, TypeScript e Node.js, com backend robusto em Python para processamento de dados.',
+      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'Railway', 'Vercel', 'APIs REST'],
+      features: [
+        'Visualização de dados e métricas de vendas em tempo real',
+        'Integração com APIs do Mercado Livre e Magazine Luiza',
+        'Gerenciamento de estoque automatizado',
+        'Controle financeiro e gerenciamento de metas',
+        'Dashboard responsivo com gráficos interativos',
+        'Sistema de notificações e alertas',
+        'Relatórios personalizados e exportação de dados',
+        'Interface administrativa completa'
+      ],
+      challenges: [
+        'Integração complexa com múltiplas APIs de marketplaces',
+        'Processamento de grandes volumes de dados em tempo real',
+        'Sincronização de estoque entre diferentes plataformas',
+        'Otimização de performance para dashboards com muitos dados'
+      ],
+      results: [
+        'Aumento de 40% na eficiência do controle de vendas',
+        'Redução significativa no tempo de atualização de estoque',
+        'Visibilidade completa das operações em tempo real',
+        'Melhoria na tomada de decisões estratégicas'
+      ],
+       images: [dashboard1, dashboard2, dashboard3],
+       githubUrl: 'https://github.com/Alexsander532',
+       icon: BarChart3,
+       category: 'fullstack'
+    },
   ],
   en: [
     {
@@ -370,6 +406,39 @@ const projectsData = {
       githubUrl: 'https://github.com/Alexsander532',
       icon: Smartphone,
       category: 'mobile'
+    },
+    {
+      id: 'brancia-dashboard',
+      title: 'Sales Dashboard - Brancia',
+      description: 'Complete dashboard for national import company with sales data visualization, inventory management and financial control integrated with Mercado Livre and Magazine Luiza APIs.',
+      longDescription: 'Enterprise dashboard developed for Brancia, a national import company. The system offers complete sales data visualization, real-time inventory management and financial control, with direct integration to Mercado Livre and Magazine Luiza APIs. Built with React, TypeScript and Node.js, with robust Python backend for data processing.',
+      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'Railway', 'Vercel', 'REST APIs'],
+      features: [
+        'Real-time sales data visualization and metrics',
+        'Integration with Mercado Livre and Magazine Luiza APIs',
+        'Automated inventory management',
+        'Financial control and goal management',
+        'Responsive dashboard with interactive charts',
+        'Notification and alert system',
+        'Custom reports and data export',
+        'Complete administrative interface'
+      ],
+      challenges: [
+        'Complex integration with multiple marketplace APIs',
+        'Real-time processing of large data volumes',
+        'Inventory synchronization across different platforms',
+        'Performance optimization for data-heavy dashboards'
+      ],
+      results: [
+        '40% increase in sales control efficiency',
+        'Significant reduction in inventory update time',
+        'Complete real-time operational visibility',
+         'Improved strategic decision making'
+       ],
+       images: [dashboard1, dashboard2, dashboard3],
+       githubUrl: 'https://github.com/Alexsander532',
+       icon: BarChart3,
+       category: 'fullstack'
     },
   ]
 };
@@ -742,6 +811,73 @@ const Projects = () => {
                               alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
                               className="w-full h-auto rounded-lg shadow-2xl border-4 border-gray-300 dark:border-gray-600 transition-all duration-300"
                               style={{ maxHeight: '500px', objectFit: 'contain' }}
+                            />
+                            
+                            {/* Navegação do carrossel */}
+                            {selectedProject.images.length > 1 && (
+                              <>
+                                <button 
+                                  onClick={prevImage}
+                                  className="absolute left-4 top-1/2 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
+                                >
+                                  <ChevronLeft className="w-6 h-6 text-primary-foreground" />
+                                </button>
+                                <button 
+                                  onClick={nextImage}
+                                  className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
+                                >
+                                  <ChevronRight className="w-6 h-6 text-primary-foreground" />
+                                </button>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                        
+                        {/* Indicadores de posição */}
+                        {selectedProject.images.length > 1 && (
+                          <div className="flex justify-center mt-6 gap-2">
+                            {selectedProject.images.map((_, index) => (
+                              <button
+                                key={index}
+                                onClick={() => setCurrentImageIndex(index)}
+                                className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                                  index === currentImageIndex 
+                                    ? 'bg-primary scale-110' 
+                                    : 'bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500'
+                                }`}
+                              />
+                            ))}
+                          </div>
+                        )}
+                        
+                        {/* Contador de imagens */}
+                        {selectedProject.images.length > 1 && (
+                          <div className="absolute top-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
+                            {currentImageIndex + 1} / {selectedProject.images.length}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Dashboard Screenshots - For fullstack projects with images */}
+                {selectedProject.category === 'fullstack' && selectedProject.images && selectedProject.images.length > 0 && (
+                  <div className="mb-8">
+                    <h4 className="text-xl font-semibold mb-4 flex items-center">
+                      <BarChart3 className="w-5 h-5 text-primary mr-2" />
+                      {language === 'pt' ? 'Screenshots do Dashboard' : 'Dashboard Screenshots'}
+                    </h4>
+                    <div className="relative">
+                      {/* Carrossel de imagens do dashboard */}
+                      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg p-6 overflow-hidden">
+                        <div className="flex justify-center">
+                          <div className="relative max-w-4xl mx-auto">
+                            <img 
+                              src={selectedProject.images[currentImageIndex]} 
+                              alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
+                              className="w-full h-auto rounded-lg shadow-2xl border-4 border-gray-300 dark:border-gray-600 transition-all duration-300"
+                              style={{ maxHeight: '600px', objectFit: 'contain' }}
                             />
                             
                             {/* Navegação do carrossel */}
