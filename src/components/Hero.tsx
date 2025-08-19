@@ -3,7 +3,7 @@ import { ArrowDown, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.png';
-import cvPortugues from '@/assets/CV - Alexsander Augusto.pdf';
+import cvPortugues from '@/assets/Currículo Alexsander Augusto.pdf';
 import cvIngles from '@/assets/CV - Alexsander Augusto Ingles.pdf';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { XIcon } from '@/components/ui/x-logo';
@@ -20,7 +20,7 @@ const Hero = () => {
     // Determinar qual versão do CV baixar com base no idioma atual
     const curriculumPDF = language === 'pt' ? cvPortugues : cvIngles;
     const fileName = language === 'pt' 
-      ? 'CV - Alexsander Augusto.pdf' 
+      ? 'Currículo Alexsander Augusto.pdf' 
       : 'CV - Alexsander Augusto Ingles.pdf';
     
     // Criar um link temporário para o download
