@@ -35,6 +35,10 @@ import colbat3 from '@/assets/colbat3.jpg';
 import dashboard1 from '@/assets/Dashboard1.png';
 import dashboard2 from '@/assets/Dashboard2.png';
 import dashboard3 from '@/assets/Dashboard3.png';
+import n8nfluxo1 from '@/assets/n8nfluxo1.png';
+import n8nfluxo2 from '@/assets/n8n fluxo 2.png';
+import n8nfluxo3 from '@/assets/n8n fluxo 3.png';
+import n8nfluxo4 from '@/assets/n8n fluxo 4.webp';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation';
@@ -276,7 +280,7 @@ const projectsData = {
         'Redução de 90% no tempo de gestão manual',
         'Melhoria significativa na experiência do cliente'
       ],
-      image: analyticsImage,
+      image: n8nfluxo1,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -309,7 +313,7 @@ const projectsData = {
         'Melhoria de 80% na experiência do paciente',
         'Otimização de 50% na gestão da agenda'
       ],
-      image: taskManagerImage,
+      image: n8nfluxo2,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -342,7 +346,7 @@ const projectsData = {
         'Redução de 60% no tempo de controle manual',
         'Melhoria significativa na educação financeira'
       ],
-      image: portfolioImage,
+      image: n8nfluxo3,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -375,7 +379,7 @@ const projectsData = {
         'Redução de 70% no tempo de resposta',
         'Aumento de 45% na taxa de conversão'
       ],
-      image: getkids1,
+      image: n8nfluxo4,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -600,7 +604,7 @@ const projectsData = {
         '90% reduction in manual management time',
         'Significant improvement in customer experience'
       ],
-      image: analyticsImage,
+      image: n8nfluxo1,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -633,7 +637,7 @@ const projectsData = {
         '80% improvement in patient experience',
         '50% optimization in calendar management'
       ],
-      image: taskManagerImage,
+      image: n8nfluxo2,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -666,7 +670,7 @@ const projectsData = {
         'Redução de 60% no tempo de controle manual',
         'Melhoria significativa na educação financeira'
       ],
-      image: portfolioImage,
+      image: n8nfluxo3,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
@@ -699,7 +703,7 @@ const projectsData = {
         'Redução de 70% no tempo de resposta',
         '45% increase in conversion rate'
       ],
-      image: getkids1,
+      image: n8nfluxo4,
       githubUrl: 'https://github.com/Alexsander532',
       icon: Cog,
       category: 'automation'
