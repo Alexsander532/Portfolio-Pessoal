@@ -25,7 +25,6 @@ const translations = {
     
     // Projetos
     featuredProjects: 'Projetos em Destaque',
-    projectsSubtitle: 'Demonstrando minha experiência em TypeScript, React e desenvolvimento web moderno',
     viewDetails: 'Ver Detalhes',
     viewSourceCode: 'Ver Código Fonte',
     liveDemo: 'Demo ao Vivo',
@@ -74,7 +73,6 @@ const translations = {
     
     // Projetos
     featuredProjects: 'Featured Projects',
-    projectsSubtitle: 'Showcasing my expertise in TypeScript, React, and modern web development',
     viewDetails: 'View Details',
     viewSourceCode: 'View Source Code',
     liveDemo: 'Live Demo',

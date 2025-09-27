@@ -248,6 +248,138 @@ const projectsData = {
        icon: BarChart3,
        category: 'fullstack'
     },
+    {
+      id: 'birthday-automation',
+      title: 'Automação de Aniversário',
+      description: 'Sistema automatizado para envio de mensagens de aniversário via WhatsApp, desenvolvido com n8n e Evolution API.',
+      longDescription: 'Automação completa para envio personalizado de mensagens de aniversário através do WhatsApp Business API. O sistema utiliza n8n para orquestração de workflows, Evolution API para integração com WhatsApp e banco de dados para gerenciamento de contatos e datas. Inclui personalização de mensagens, agendamento automático e relatórios de entrega.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'PostgreSQL', 'Webhook'],
+      features: [
+        'Envio automático de mensagens de aniversário',
+        'Personalização de mensagens por contato',
+        'Integração com WhatsApp Business API',
+        'Agendamento inteligente de envios',
+        'Relatórios de entrega e engajamento',
+        'Interface de gerenciamento de contatos',
+        'Sistema de backup de dados',
+        'Logs detalhados de atividades'
+      ],
+      challenges: [
+        'Integração robusta com APIs do WhatsApp',
+        'Gerenciamento de grandes volumes de contatos',
+        'Sincronização de horários e fusos',
+        'Tratamento de falhas e reenvios automáticos'
+      ],
+      results: [
+        'Automatização de 100% dos envios de aniversário',
+        'Aumento de 85% no engajamento com clientes',
+        'Redução de 90% no tempo de gestão manual',
+        'Melhoria significativa na experiência do cliente'
+      ],
+      image: analyticsImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'dental-clinic-automation',
+      title: 'Automação de Atendimento - Clínica Odontológica',
+      description: 'Sistema automatizado para agendamento e atendimento de clínica odontológica via WhatsApp, com n8n e Evolution API.',
+      longDescription: 'Automação completa para atendimento de clínica odontológica através do WhatsApp Business API. O sistema gerencia agendamentos, confirmações, lembretes e atendimento inicial de pacientes. Utiliza n8n para workflows inteligentes, Evolution API para comunicação e integração com sistema de gestão da clínica.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'MySQL', 'Webhook', 'Calendar API'],
+      features: [
+        'Agendamento automático via WhatsApp',
+        'Confirmação e lembretes de consultas',
+        'Atendimento inicial automatizado',
+        'Integração com agenda da clínica',
+        'Triagem de urgências',
+        'Histórico de conversas',
+        'Relatórios de atendimento',
+        'Sistema de feedback pós-consulta'
+      ],
+      challenges: [
+        'Integração com sistema legado da clínica',
+        'Processamento de linguagem natural para triagem',
+        'Sincronização em tempo real com agenda',
+        'Compliance com LGPD para dados de saúde'
+      ],
+      results: [
+        'Redução de 70% no tempo de agendamento',
+        'Aumento de 60% na taxa de confirmação',
+        'Melhoria de 80% na experiência do paciente',
+        'Otimização de 50% na gestão da agenda'
+      ],
+      image: taskManagerImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'financial-assistant-whatsapp',
+      title: 'Assistente Financeiro no WhatsApp',
+      description: 'Assistente virtual para controle financeiro pessoal via WhatsApp, desenvolvido com n8n e Evolution API.',
+      longDescription: 'Assistente financeiro inteligente que opera através do WhatsApp, permitindo controle de gastos, receitas e planejamento financeiro. Utiliza n8n para processamento de comandos, Evolution API para comunicação e banco de dados para armazenamento seguro de informações financeiras.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'PostgreSQL', 'Chart.js', 'Webhook'],
+      features: [
+        'Registro de gastos e receitas via mensagem',
+        'Categorização automática de transações',
+        'Relatórios financeiros personalizados',
+        'Alertas de limite de gastos',
+        'Planejamento de metas financeiras',
+        'Gráficos e visualizações',
+        'Backup automático de dados',
+        'Comandos de voz para registro rápido'
+      ],
+      challenges: [
+        'Processamento de linguagem natural para transações',
+        'Segurança e criptografia de dados financeiros',
+        'Interface conversacional intuitiva',
+        'Integração com bancos e cartões'
+      ],
+      results: [
+        'Controle financeiro 24/7 via WhatsApp',
+        'Aumento de 90% na organização financeira',
+        'Redução de 60% no tempo de controle manual',
+        'Melhoria significativa na educação financeira'
+      ],
+      image: portfolioImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'real-estate-sdr-agent',
+      title: 'Agente SDR de Vendas - Imobiliária',
+      description: 'Agente de vendas automatizado para imobiliária via WhatsApp, com qualificação de leads e agendamento.',
+      longDescription: 'Agente SDR (Sales Development Representative) automatizado para imobiliárias, operando via WhatsApp Business API. O sistema qualifica leads, agenda visitas, envia informações de imóveis e mantém follow-up automatizado. Utiliza n8n para workflows de vendas e Evolution API para comunicação.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'CRM Integration', 'MongoDB', 'Webhook'],
+      features: [
+        'Qualificação automática de leads',
+        'Envio de informações de imóveis',
+        'Agendamento de visitas',
+        'Follow-up automatizado',
+        'Integração com CRM imobiliário',
+        'Relatórios de conversão',
+        'Chatbot inteligente para dúvidas',
+        'Sistema de pontuação de leads'
+      ],
+      challenges: [
+        'Qualificação inteligente de prospects',
+        'Integração com múltiplos sistemas de CRM',
+        'Personalização de abordagem por perfil',
+        'Otimização de taxa de conversão'
+      ],
+      results: [
+        'Aumento de 150% na geração de leads',
+        'Melhoria de 80% na qualificação',
+        'Redução de 70% no tempo de resposta',
+        'Aumento de 45% na taxa de conversão'
+      ],
+      image: getkids1,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
   ],
   en: [
     {
@@ -412,7 +544,7 @@ const projectsData = {
       title: 'Sales Dashboard - Brancia',
       description: 'Complete dashboard for national import company with sales data visualization, inventory management and financial control integrated with Mercado Livre and Magazine Luiza APIs.',
       longDescription: 'Enterprise dashboard developed for Brancia, a national import company. The system offers complete sales data visualization, real-time inventory management and financial control, with direct integration to Mercado Livre and Magazine Luiza APIs. Built with React, TypeScript and Node.js, with robust Python backend for data processing.',
-      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'Railway', 'Vercel', 'REST APIs'],
+      technologies: ['React', 'TypeScript', 'Node.js', 'Python', 'Tailwind CSS', 'Railway', 'Vercel', 'APIs REST'],
       features: [
         'Real-time sales data visualization and metrics',
         'Integration with Mercado Livre and Magazine Luiza APIs',
@@ -421,7 +553,7 @@ const projectsData = {
         'Responsive dashboard with interactive charts',
         'Notification and alert system',
         'Custom reports and data export',
-        'Complete administrative interface'
+        'Interface administrativa completa'
       ],
       challenges: [
         'Complex integration with multiple marketplace APIs',
@@ -430,15 +562,147 @@ const projectsData = {
         'Performance optimization for data-heavy dashboards'
       ],
       results: [
-        '40% increase in sales control efficiency',
-        'Significant reduction in inventory update time',
-        'Complete real-time operational visibility',
-         'Improved strategic decision making'
-       ],
+        'Aumento de 40% na eficiência do controle de vendas',
+        'Redução significativa no tempo de atualização de estoque',
+        'Visibilidade completa das operações em tempo real',
+        'Melhoria na tomada de decisões estratégicas'
+      ],
        images: [dashboard1, dashboard2, dashboard3],
        githubUrl: 'https://github.com/Alexsander532',
        icon: BarChart3,
        category: 'fullstack'
+    },
+    {
+      id: 'birthday-automation',
+      title: 'Birthday Automation',
+      description: 'Automated system for sending birthday messages via WhatsApp, developed with n8n and Evolution API.',
+      longDescription: 'Complete automation for personalized birthday message sending through WhatsApp Business API. The system uses n8n for workflow orchestration, Evolution API for WhatsApp integration and database for contact and date management. Includes message personalization, automatic scheduling and delivery reports.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'PostgreSQL', 'Webhook'],
+      features: [
+        'Automatic birthday message sending',
+        'Message personalization per contact',
+        'WhatsApp Business API integration',
+        'Intelligent sending scheduling',
+        'Delivery and engagement reports',
+        'Contact management interface',
+        'Data backup system',
+        'Detailed activity logs'
+      ],
+      challenges: [
+        'Robust integration with WhatsApp APIs',
+        'Large volume contact management',
+        'Time zone synchronization',
+        'Automatic failure handling and retries'
+      ],
+      results: [
+        '100% automation of birthday sends',
+        '85% increase in customer engagement',
+        '90% reduction in manual management time',
+        'Significant improvement in customer experience'
+      ],
+      image: analyticsImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'dental-clinic-automation',
+      title: 'Dental Clinic Service Automation',
+      description: 'Automated system for dental clinic scheduling and service via WhatsApp, with n8n and Evolution API.',
+      longDescription: 'Complete automation for dental clinic service through WhatsApp Business API. The system manages appointments, confirmations, reminders and initial patient care. Uses n8n for intelligent workflows, Evolution API for communication and integration with clinic management system.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'MySQL', 'Webhook', 'Calendar API'],
+      features: [
+        'Automatic scheduling via WhatsApp',
+        'Appointment confirmation and reminders',
+        'Automated initial service',
+        'Clinic calendar integration',
+        'Emergency triage',
+        'Conversation history',
+        'Service reports',
+        'Post-consultation feedback system'
+      ],
+      challenges: [
+        'Integration with clinic legacy system',
+        'Natural language processing for triage',
+        'Real-time calendar synchronization',
+        'LGPD compliance for health data'
+      ],
+      results: [
+        '70% reduction in scheduling time',
+        '60% increase in confirmation rate',
+        '80% improvement in patient experience',
+        '50% optimization in calendar management'
+      ],
+      image: taskManagerImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'financial-assistant-whatsapp',
+      title: 'Financial Assistant on WhatsApp',
+      description: 'Virtual assistant for personal financial control via WhatsApp, developed with n8n and Evolution API.',
+      longDescription: 'Intelligent financial assistant that operates through WhatsApp, allowing expense control, income and financial planning. Uses n8n for command processing, Evolution API for communication and database for secure storage of financial information.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'PostgreSQL', 'Chart.js', 'Webhook'],
+      features: [
+        'Expense and income recording via message',
+        'Automatic transaction categorization',
+        'Personalized financial reports',
+        'Spending limit alerts',
+        'Financial goal planning',
+        'Charts and visualizations',
+        'Automatic data backup',
+        'Voice commands for quick recording'
+      ],
+      challenges: [
+        'Processamento de linguagem natural para transações',
+        'Segurança e criptografia de dados financeiros',
+        'Interface conversacional intuitiva',
+        'Integração com bancos e cartões'
+      ],
+      results: [
+        'Controle financeiro 24/7 via WhatsApp',
+        'Aumento de 90% na organização financeira',
+        'Redução de 60% no tempo de controle manual',
+        'Melhoria significativa na educação financeira'
+      ],
+      image: portfolioImage,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
+    },
+    {
+      id: 'real-estate-sdr-agent',
+      title: 'Real Estate SDR Sales Agent',
+      description: 'Automated sales agent for real estate via WhatsApp, with lead qualification and scheduling.',
+      longDescription: 'Automated SDR (Sales Development Representative) agent for real estate, operating via WhatsApp Business API. The system qualifies leads, schedules visits, sends property information and maintains automated follow-up. Uses n8n for sales workflows and Evolution API for communication.',
+      technologies: ['n8n', 'Evolution API', 'WhatsApp Business API', 'Node.js', 'CRM Integration', 'MongoDB', 'Webhook'],
+      features: [
+        'Automatic lead qualification',
+        'Property information sending',
+        'Visit scheduling',
+        'Automated follow-up',
+        'Real estate CRM integration',
+        'Conversion reports',
+        'Intelligent chatbot for questions',
+        'Lead scoring system'
+      ],
+      challenges: [
+        'Intelligent prospect qualification',
+        'Integration with multiple CRM systems',
+        'Approach personalization by profile',
+        'Conversion rate optimization'
+      ],
+      results: [
+        'Aumento de 150% na geração de leads',
+        'Melhoria de 80% na qualificação',
+        'Redução de 70% no tempo de resposta',
+        '45% increase in conversion rate'
+      ],
+      image: getkids1,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Cog,
+      category: 'automation'
     },
   ]
 };
@@ -473,12 +737,26 @@ const categoryLabels = {
 const Projects = () => {
   const { language, t } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [activeFilter, setActiveFilter] = useState<ProjectCategory | 'all'>('all');
+  
+  // Estados para rolagem horizontal
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+  
   const sectionRef = useRef<HTMLElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   // Seleciona os projetos com base no idioma atual
-  const projects = projectsData[language];
+  const allProjects = projectsData[language];
+  
+  // Filtra os projetos com base no filtro ativo
+  const projects = activeFilter === 'all' 
+    ? allProjects 
+    : allProjects.filter(project => project.category === activeFilter);
 
   // Funções para o carrossel de imagens
   const nextImage = () => {
@@ -500,6 +778,67 @@ const Projects = () => {
   const selectProject = (project: Project) => {
     setSelectedProject(project);
     setCurrentImageIndex(0);
+  };
+
+  const handleFilterChange = (filter: ProjectCategory | 'all') => {
+    setActiveFilter(filter);
+  };
+
+  // Funções para rolagem horizontal
+  const scrollToPosition = (position: number) => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo({
+        left: position,
+        behavior: 'smooth'
+      });
+      setScrollPosition(position);
+    }
+  };
+
+  const scrollNext = () => {
+    if (scrollContainerRef.current) {
+      const container = scrollContainerRef.current;
+      const cardWidth = 384; // Largura aproximada do card + gap
+      const newPosition = Math.min(
+        scrollPosition + cardWidth * 2, // Move 2 cards por vez
+        container.scrollWidth - container.clientWidth
+      );
+      scrollToPosition(newPosition);
+    }
+  };
+
+  const scrollPrev = () => {
+    if (scrollContainerRef.current) {
+      const cardWidth = 384;
+      const newPosition = Math.max(scrollPosition - cardWidth * 2, 0);
+      scrollToPosition(newPosition);
+    }
+  };
+
+  // Funções para arrastar
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (scrollContainerRef.current) {
+      setIsDragging(true);
+      setStartX(e.pageX - scrollContainerRef.current.offsetLeft);
+      setScrollLeft(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !scrollContainerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainerRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Velocidade do scroll
+    scrollContainerRef.current.scrollLeft = scrollLeft - walk;
+    setScrollPosition(scrollContainerRef.current.scrollLeft);
   };
 
   useEffect(() => {
@@ -529,22 +868,98 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {language === 'pt' ? 'Projetos em ' : 'Featured '}<span className="gradient-text">{language === 'pt' ? 'Destaque' : 'Projects'}</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('projectsSubtitle')}
-          </p>
+          
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            <Button
+              variant={activeFilter === 'all' ? 'default' : 'outline'}
+              onClick={() => handleFilterChange('all')}
+              className={`transition-all duration-300 ${
+                activeFilter === 'all' 
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg' 
+                  : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+              }`}
+            >
+              {language === 'pt' ? 'Todos' : 'All'}
+            </Button>
+            
+            {(['frontend', 'backend', 'fullstack', 'mobile', 'automation'] as ProjectCategory[]).map((category) => {
+              const Icon = categoryIcons[category];
+              return (
+                <Button
+                  key={category}
+                  variant={activeFilter === category ? 'default' : 'outline'}
+                  onClick={() => handleFilterChange(category)}
+                  className={`transition-all duration-300 flex items-center gap-2 ${
+                    activeFilter === category 
+                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg' 
+                      : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                  }`}
+                >
+                  <Icon size={16} />
+                  {categoryLabels[language][category]}
+                </Button>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16 transition-all duration-500 transform ease-in-out opacity-100 scale-100">
-          {projects.map((project, index) => (
+        {/* Projects Grid with Horizontal Scroll */}
+        <div className="relative mb-16">
+          {/* Navigation Buttons */}
+          <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-background/80 backdrop-blur-sm border-border/50 hover:bg-accent/80 shadow-lg"
+              onClick={scrollPrev}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+          </div>
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10">
+            <Button
+              variant="outline"
+              size="icon"
+              className="bg-background/80 backdrop-blur-sm border-border/50 hover:bg-accent/80 shadow-lg"
+              onClick={scrollNext}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
+          </div>
+
+          {/* Scrollable Container */}
+          <div 
+            ref={scrollContainerRef}
+            className="overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing"
+            style={{ 
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+              WebkitScrollbar: { display: 'none'
+            }}}
+            onMouseDown={handleMouseDown}
+            onMouseLeave={handleMouseLeave}
+            onMouseUp={handleMouseUp}
+            onMouseMove={handleMouseMove}
+          >
+            {/* Projects Grid - Single Row Layout */}
+            <div 
+              className="flex gap-6 transition-all duration-500"
+              style={{
+                width: `${projects.length * 320}px`
+              }}
+            >
+              {projects.map((project, index) => (
             <Card 
               key={project.id}
               className={`glass-card hover-glow group cursor-pointer transition-all duration-1000 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-              } animate-fade-in`}
+              } animate-fade-in flex-shrink-0`}
               style={{ 
                 animationDelay: `${index * 200}ms`,
-                animationFillMode: 'both' 
+                animationFillMode: 'both',
+                width: '300px',
+                minWidth: '300px'
               }}
               onClick={() => selectProject(project as Project)}
             >
@@ -642,6 +1057,8 @@ const Projects = () => {
               </CardContent>
             </Card>
           ))}
+            </div>
+          </div>
         </div>
 
         {/* Project Detail Modal */}
