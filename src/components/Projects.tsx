@@ -39,9 +39,10 @@ import n8nfluxo1 from '@/assets/n8nfluxo1.png';
 import n8nfluxo2 from '@/assets/n8n fluxo 2.png';
 import n8nfluxo3 from '@/assets/n8n fluxo 3.png';
 import n8nfluxo4 from '@/assets/n8n fluxo 4.webp';
+import mine1 from '@/assets/mine1.png';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation';
+type ProjectCategory = 'frontend' | 'backend' | 'fullstack' | 'mobile' | 'automation' | 'gamedev';
 
 interface Project {
   id: string;
@@ -384,6 +385,39 @@ const projectsData = {
       icon: Cog,
       category: 'automation'
     },
+    {
+      id: 'minecraft-bedrock-mobs',
+      title: 'Demo Mob Behavior Pack - Minecraft Bedrock',
+      description: 'Add-on para Minecraft Bedrock que adiciona um mob customizado com perseguição realista, ataque inteligente e sistema de loot balanceado.',
+      longDescription: 'Demo Mob Behavior Pack é um add-on completo para Minecraft Bedrock 1.20+ que implementa um mob customizado (Demo Mob) com comportamento realista. Utiliza Script API moderna e TypeScript para lógica de perseguição ao jogador, sistema de ataque baseado em distância e loot balanceado. O projeto inclui configuração dinâmica via config.json, empacotamento automatizado com Node.js e documentação completa.',
+      technologies: ['TypeScript', 'JavaScript', 'Minecraft Bedrock Script API', 'JSON', 'Node.js', 'Behavior Packs'],
+      features: [
+        'Mob customizado com vida, velocidade e dano configuráveis',
+        'Perseguição natural com movimentação suave e cálculos vetoriais',
+        'Sistema de ataque inteligente com detecção de distância (2.2 blocos)',
+        'Loot balanceado: diamante (5%), carne cozida (60%), carne podre (35%)',
+        'Detecção eficiente do jogador mais próximo',
+        'Configuração dinâmica via arquivo config.json',
+        'Compatibilidade com Minecraft Bedrock 1.20+',
+        'Empacotamento automatizado para gerar .mcpack'
+      ],
+      challenges: [
+        'Implementar movimentação suave com cálculos vetoriais precisos',
+        'Rastrear e detectar o jogador mais próximo em múltiplas dimensões',
+        'Sincronizar definições JSON com lógica TypeScript',
+        'Garantir funcionamento com falhas na leitura de configuração'
+      ],
+      results: [
+        'Estrutura aprofundada de behavior packs e entidades Bedrock',
+        'Domínio de lógica de jogo com movimentação e interação entre entidades',
+        'Automação de build e empacotamento com Node.js',
+        'Código modular, bem documentado e fácil de expandir'
+      ],
+      image: mine1,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Code,
+      category: 'gamedev'
+    },
   ],
   en: [
     {
@@ -708,6 +742,39 @@ const projectsData = {
       icon: Cog,
       category: 'automation'
     },
+    {
+      id: 'minecraft-bedrock-mobs',
+      title: 'Demo Mob Behavior Pack - Minecraft Bedrock',
+      description: 'Add-on for Minecraft Bedrock featuring a customized mob with realistic pursuit, intelligent attack and balanced loot system.',
+      longDescription: 'Demo Mob Behavior Pack is a complete add-on for Minecraft Bedrock 1.20+ that implements a customized mob (Demo Mob) with realistic behavior. Uses modern Script API and TypeScript for player pursuit logic, distance-based attack system and balanced loot. The project includes dynamic configuration via config.json, automated packaging with Node.js and complete documentation.',
+      technologies: ['TypeScript', 'JavaScript', 'Minecraft Bedrock Script API', 'JSON', 'Node.js', 'Behavior Packs'],
+      features: [
+        'Custom mob with configurable health, speed and damage',
+        'Natural pursuit with smooth movement and vector calculations',
+        'Intelligent attack system with distance detection (2.2 blocks)',
+        'Balanced loot: diamond (5%), cooked meat (60%), rotten meat (35%)',
+        'Efficient detection of nearest player',
+        'Dynamic configuration via config.json file',
+        'Compatibility with Minecraft Bedrock 1.20+',
+        'Automated packaging to generate .mcpack'
+      ],
+      challenges: [
+        'Implementing smooth movement with precise vector calculations',
+        'Tracking and detecting nearest player in multiple dimensions',
+        'Synchronizing JSON definitions with TypeScript logic',
+        'Ensuring functionality with configuration read failures'
+      ],
+      results: [
+        'In-depth understanding of Bedrock behavior packs and entities',
+        'Mastery of game logic with movement and entity interaction',
+        'Build automation and packaging with Node.js',
+        'Modular, well-documented and easy to expand code'
+      ],
+      image: mine1,
+      githubUrl: 'https://github.com/Alexsander532',
+      icon: Code,
+      category: 'gamedev'
+    },
   ]
 };
 
@@ -717,7 +784,8 @@ const categoryIcons = {
   backend: Server,
   fullstack: Layers,
   mobile: Smartphone,
-  automation: Cog
+  automation: Cog,
+  gamedev: BarChart3
 };
 
 // Category labels mapping for PT and EN
@@ -727,14 +795,16 @@ const categoryLabels = {
     backend: 'Backend',
     fullstack: 'Full Stack',
     mobile: 'Mobile',
-    automation: 'Automações'
+    automation: 'Automações',
+    gamedev: 'Game Dev'
   },
   en: {
     frontend: 'Frontend',
     backend: 'Backend',
     fullstack: 'Full Stack',
     mobile: 'Mobile',
-    automation: 'Automation'
+    automation: 'Automation',
+    gamedev: 'Game Dev'
   }
 };
 
@@ -887,7 +957,7 @@ const Projects = () => {
               {language === 'pt' ? 'Todos' : 'All'}
             </Button>
             
-            {(['frontend', 'backend', 'fullstack', 'mobile', 'automation'] as ProjectCategory[]).map((category) => {
+            {(['frontend', 'backend', 'fullstack', 'mobile', 'automation', 'gamedev'] as ProjectCategory[]).map((category) => {
               const Icon = categoryIcons[category];
               return (
                 <Button
@@ -938,9 +1008,8 @@ const Projects = () => {
             className="overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing"
             style={{ 
               scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-              WebkitScrollbar: { display: 'none'
-            }}}
+              msOverflowStyle: 'none'
+            }}
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
@@ -1078,7 +1147,6 @@ const Projects = () => {
               <CardHeader className="p-0">
                 <div className="relative">
                   {selectedProject.images && selectedProject.images.length > 1 ? (
-                    // Carrossel de imagens
                     <div className="relative">
                       <img 
                         src={selectedProject.images[currentImageIndex]} 
@@ -1086,7 +1154,6 @@ const Projects = () => {
                         className="w-full h-64 object-cover transition-opacity duration-300"
                       />
                       
-                      {/* Botões de navegação */}
                       <button 
                         onClick={prevImage}
                         className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors z-10"
@@ -1100,21 +1167,25 @@ const Projects = () => {
                         <ChevronRight className="w-5 h-5" />
                       </button>
                       
-                      {/* Indicadores */}
                       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
                         {selectedProject.images.map((_, index) => (
                           <button
                             key={index}
                             onClick={() => setCurrentImageIndex(index)}
-                            className={`w-2 h-2 rounded-full transition-colors ${
-                              index === currentImageIndex ? 'bg-primary' : 'bg-white/50'
+                            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                              index === currentImageIndex 
+                                ? 'bg-primary scale-110' 
+                                : 'bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500'
                             }`}
                           />
                         ))}
                       </div>
+
+                      <div className="absolute top-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
+                        {currentImageIndex + 1} / {selectedProject.images.length}
+                      </div>
                     </div>
                   ) : (
-                    // Imagem única
                     <img 
                       src={selectedProject.image} 
                       alt={selectedProject.title}
@@ -1125,15 +1196,10 @@ const Projects = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
                   <button 
                     onClick={() => setSelectedProject(null)}
-                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors z-20"
+                    className="absolute top-4 right-4 w-10 h-10 rounded-full bg-card/80 flex items-center justify-center hover:bg-card transition-colors"
                   >
                     ×
                   </button>
-                  <div className="absolute top-4 left-4 z-20">
-                    <Badge className="bg-primary/80">
-                      {categoryLabels[language][selectedProject.category]}
-                    </Badge>
-                  </div>
                 </div>
               </CardHeader>
 
@@ -1153,7 +1219,6 @@ const Projects = () => {
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
-                  {/* Features */}
                   <div>
                     <h4 className="text-xl font-semibold mb-4 flex items-center">
                       <Zap className="w-5 h-5 text-primary mr-2" />
@@ -1169,7 +1234,6 @@ const Projects = () => {
                     </ul>
                   </div>
 
-                  {/* Challenges & Results */}
                   <div>
                     <h4 className="text-xl font-semibold mb-4 flex items-center">
                       <Shield className="w-5 h-5 text-primary mr-2" />
@@ -1200,7 +1264,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* Tech Stack */}
                 <div className="mb-8">
                   <h4 className="text-xl font-semibold mb-4 flex items-center">
                     <Database className="w-5 h-5 text-primary mr-2" />
@@ -1215,141 +1278,6 @@ const Projects = () => {
                   </div>
                 </div>
 
-                {/* App Screenshots - Only for mobile projects */}
-                {selectedProject.category === 'mobile' && selectedProject.images && selectedProject.images.length > 0 && (
-                  <div className="mb-8">
-                    <h4 className="text-xl font-semibold mb-4 flex items-center">
-                      <Smartphone className="w-5 h-5 text-primary mr-2" />
-                      {language === 'pt' ? 'Screenshots do App' : 'App Screenshots'}
-                    </h4>
-                    <div className="relative">
-                      {/* Carrossel de imagens do app */}
-                      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg p-6 overflow-hidden">
-                        <div className="flex justify-center">
-                          <div className="relative max-w-xs mx-auto">
-                            <img 
-                              src={selectedProject.images[currentImageIndex]} 
-                              alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
-                              className="w-full h-auto rounded-lg shadow-2xl border-4 border-gray-300 dark:border-gray-600 transition-all duration-300"
-                              style={{ maxHeight: '500px', objectFit: 'contain' }}
-                            />
-                            
-                            {/* Navegação do carrossel */}
-                            {selectedProject.images.length > 1 && (
-                              <>
-                                <button 
-                                  onClick={prevImage}
-                                  className="absolute left-4 top-1/2 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
-                                >
-                                  <ChevronLeft className="w-6 h-6 text-primary-foreground" />
-                                </button>
-                                <button 
-                                  onClick={nextImage}
-                                  className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
-                                >
-                                  <ChevronRight className="w-6 h-6 text-primary-foreground" />
-                                </button>
-                              </>
-                            )}
-                          </div>
-                        </div>
-                        
-                        {/* Indicadores de posição */}
-                        {selectedProject.images.length > 1 && (
-                          <div className="flex justify-center mt-6 gap-2">
-                            {selectedProject.images.map((_, index) => (
-                              <button
-                                key={index}
-                                onClick={() => setCurrentImageIndex(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                                  index === currentImageIndex 
-                                    ? 'bg-primary scale-110' 
-                                    : 'bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500'
-                                }`}
-                              />
-                            ))}
-                          </div>
-                        )}
-                        
-                        {/* Contador de imagens */}
-                        {selectedProject.images.length > 1 && (
-                          <div className="absolute top-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
-                            {currentImageIndex + 1} / {selectedProject.images.length}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Dashboard Screenshots - For fullstack projects with images */}
-                {selectedProject.category === 'fullstack' && selectedProject.images && selectedProject.images.length > 0 && (
-                  <div className="mb-8">
-                    <h4 className="text-xl font-semibold mb-4 flex items-center">
-                      <BarChart3 className="w-5 h-5 text-primary mr-2" />
-                      {language === 'pt' ? 'Screenshots do Dashboard' : 'Dashboard Screenshots'}
-                    </h4>
-                    <div className="relative">
-                      {/* Carrossel de imagens do dashboard */}
-                      <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 rounded-lg p-6 overflow-hidden">
-                        <div className="flex justify-center">
-                          <div className="relative max-w-4xl mx-auto">
-                            <img 
-                              src={selectedProject.images[currentImageIndex]} 
-                              alt={`${selectedProject.title} - Screenshot ${currentImageIndex + 1}`}
-                              className="w-full h-auto rounded-lg shadow-2xl border-4 border-gray-300 dark:border-gray-600 transition-all duration-300"
-                              style={{ maxHeight: '600px', objectFit: 'contain' }}
-                            />
-                            
-                            {/* Navegação do carrossel */}
-                            {selectedProject.images.length > 1 && (
-                              <>
-                                <button 
-                                  onClick={prevImage}
-                                  className="absolute left-4 top-1/2 -translate-y-1/2 -translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
-                                >
-                                  <ChevronLeft className="w-6 h-6 text-primary-foreground" />
-                                </button>
-                                <button 
-                                  onClick={nextImage}
-                                  className="absolute right-4 top-1/2 -translate-y-1/2 translate-x-full w-12 h-12 rounded-full bg-primary/90 hover:bg-primary flex items-center justify-center transition-all duration-200 shadow-lg"
-                                >
-                                  <ChevronRight className="w-6 h-6 text-primary-foreground" />
-                                </button>
-                              </>
-                            )}
-                          </div>
-                        </div>
-                        
-                        {/* Indicadores de posição */}
-                        {selectedProject.images.length > 1 && (
-                          <div className="flex justify-center mt-6 gap-2">
-                            {selectedProject.images.map((_, index) => (
-                              <button
-                                key={index}
-                                onClick={() => setCurrentImageIndex(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-200 ${
-                                  index === currentImageIndex 
-                                    ? 'bg-primary scale-110' 
-                                    : 'bg-gray-400 hover:bg-gray-500 dark:bg-gray-600 dark:hover:bg-gray-500'
-                                }`}
-                              />
-                            ))}
-                          </div>
-                        )}
-                        
-                        {/* Contador de imagens */}
-                        {selectedProject.images.length > 1 && (
-                          <div className="absolute top-4 right-4 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
-                            {currentImageIndex + 1} / {selectedProject.images.length}
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Action Buttons */}
                 <div className="flex flex-wrap gap-4">
                   <Button 
                     className="bg-gradient-primary hover-glow"
@@ -1358,7 +1286,6 @@ const Projects = () => {
                     <Github className="w-5 h-5 mr-2" />
                     {t('viewSourceCode')}
                   </Button>
-
                 </div>
               </CardContent>
             </Card>
