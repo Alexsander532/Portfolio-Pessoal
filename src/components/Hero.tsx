@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import heroWorkspace from '@/assets/hero-workspace.jpg';
 import profilePhoto from '@/assets/profile-photo.png';
 import cvPortugues from '@/assets/Currículo Alexsander Augusto.pdf';
-import cvIngles from '@/assets/CV - Alexsander Augusto Ingles.pdf';
+import cvIngles from '@/assets/Currículo Alexsander Augusto en-US.pdf';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { XIcon } from '@/components/ui/x-logo';
 
@@ -21,7 +21,7 @@ const Hero = () => {
     const curriculumPDF = language === 'pt' ? cvPortugues : cvIngles;
     const fileName = language === 'pt' 
       ? 'Currículo Alexsander Augusto.pdf' 
-      : 'CV - Alexsander Augusto Ingles.pdf';
+      : 'Currículo Alexsander Augusto en-US.pdf';
     
     // Criar um link temporário para o download
     const link = document.createElement('a');
